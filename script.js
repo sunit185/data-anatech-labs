@@ -724,10 +724,10 @@ function initBookingModal() {
       }
     }
     body += "\n---\nSent via Data Anatech Labs Website";
-    return `mailto:kamblesunit7@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    return `mailto:anatechdatalabs@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }
 
-  // Helper to send email inquiry to kamblesunit7@gmail.com
+  // Helper to send email inquiry to anatechdatalabs@gmail.com
   async function sendEnquiryEmail(formElement, subject, mailtoBtnId, fallbackCallback) {
     const formData = new FormData(formElement);
     const dataObj = Object.fromEntries(formData.entries());
@@ -792,7 +792,7 @@ function initBookingModal() {
       const submitBtn = inlineForm.querySelector('button[type="submit"]');
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.innerHTML = '<span class="animate-spin inline-block mr-2">⏳</span> Routing to kamblesunit7@gmail.com...';
+        submitBtn.innerHTML = '<span class="animate-spin inline-block mr-2">⏳</span> Routing to anatechdatalabs@gmail.com...';
       }
 
       await sendEnquiryEmail(inlineForm, 'New Website Inquiry - Data Anatech Labs', 'inlineDirectMailtoLink', () => {
