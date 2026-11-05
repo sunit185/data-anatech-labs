@@ -1,0 +1,2119 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Anatech Labs | Data Analytics, AI, Automation & Data Engineering Solutions</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Data Anatech Labs delivers Data Analytics, Power BI, Tableau, Data Engineering, Data Migration, Automation, AI Solutions, and Business Intelligence services to help organizations make smarter decisions.">
+  <meta name="keywords" content="Data Analytics Services, Power BI Consulting, Tableau Development, Data Engineering Services, Data Migration Services, Microsoft Fabric Consulting, AI Consulting Services, Business Intelligence Solutions, Data Automation, Data Science Services">
+  <meta name="author" content="Data Anatech Labs">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dataanatechlabs.com/">
+  <meta property="og:title" content="Data Anatech Labs | Transform Data Into Business Growth">
+  <meta property="og:description" content="Unlock the full potential of your enterprise data with Analytics, AI, Automation, and Modern Data Engineering solutions.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://dataanatechlabs.com/">
+  <meta property="twitter:title" content="Data Anatech Labs | Transform Data Into Business Growth">
+  <meta property="twitter:description" content="Unlock the full potential of your enterprise data with Analytics, AI, Automation, and Modern Data Engineering solutions.">
+  <meta property="twitter:image" content="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="logo.jpg">
+  <link rel="apple-touch-icon" href="logo.jpg">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#060913',
+              navy: '#0b1120',
+              surface: '#0f172a',
+              teal: '#00e5c9',
+              'teal-dark': '#0d9488',
+              blue: '#38bdf8',
+              purple: '#a855f7'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Data Anatech Labs",
+    "image": "logo.jpg",
+    "description": "Data and AI consulting company helping organizations transform raw data into business value through Analytics, Data Engineering, Automation, and AI solutions.",
+    "url": "https://dataanatechlabs.com",
+    "telephone": "+91-8669038009",
+    "email": "kamblesunit7@gmail.com",
+    "priceRange": "$$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mumbai",
+      "addressRegion": "Maharashtra",
+      "addressCountry": "IN"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "serviceType": [
+      "Data Analytics & Dashboard Development",
+      "Power BI Consulting",
+      "Tableau Development",
+      "Data Engineering & ETL/ELT",
+      "Data Migration & Modernization",
+      "Business Process Automation",
+      "Artificial Intelligence & Machine Learning Solutions",
+      "Business Intelligence Strategy"
+    ]
+  }
+  </script>
+</head>
+<body class="bg-brand-dark text-slate-100 antialiased selection:bg-teal-500 selection:text-slate-950 relative min-h-screen">
+
+  <!-- Ambient Glowing Background Blobs -->
+  <div class="fixed top-0 left-1/4 blob-teal bg-blob pointer-events-none"></div>
+  <div class="fixed top-1/3 -right-20 blob-purple bg-blob pointer-events-none"></div>
+  <div class="fixed bottom-10 left-10 blob-blue bg-blob pointer-events-none"></div>
+
+  <!-- Background Subtle Grid Pattern -->
+  <div class="fixed inset-0 bg-grid-pattern opacity-40 pointer-events-none z-0"></div>
+
+  <!-- ========================================================================
+       Sticky Navigation Bar
+       ======================================================================== -->
+  <header id="mainNavbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-5 bg-transparent border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        
+        <!-- Brand Logo -->
+        <a href="#hero" class="flex items-center gap-2.5 sm:gap-3 group shrink-0">
+          <div class="relative w-11 h-11 sm:w-12 sm:h-12 xl:w-14 xl:h-14 flex items-center justify-center rounded-2xl bg-white p-1 shadow-lg shadow-teal-500/20 group-hover:shadow-teal-500/40 group-hover:scale-105 transition-all duration-300 border border-white/30 overflow-hidden shrink-0">
+            <img src="logo.jpg" alt="Data Anatech Labs" class="w-full h-full object-contain rounded-xl" loading="eager">
+          </div>
+          <div class="whitespace-nowrap shrink-0">
+            <div class="font-extrabold text-sm sm:text-base xl:text-lg tracking-tight leading-none text-white flex items-center gap-1">
+              DATA ANATECH <span class="text-teal-400">LABS</span>
+            </div>
+            <span class="text-[9px] sm:text-[10px] uppercase tracking-widest text-slate-400 font-mono mt-1 block">Analytics &bull; AI &bull; Cloud</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-3.5 xl:gap-6 shrink-0">
+          <a href="#services" class="nav-link-item text-xs xl:text-sm font-medium text-slate-300 hover:text-teal-400 transition-colors whitespace-nowrap">Services</a>
+          <a href="#interactive-demo" class="nav-link-item text-xs xl:text-sm font-medium text-slate-300 hover:text-teal-400 transition-colors whitespace-nowrap">Live Demo</a>
+          <a href="#technologies" class="nav-link-item text-xs xl:text-sm font-medium text-slate-300 hover:text-teal-400 transition-colors whitespace-nowrap">Tech Stack</a>
+          <a href="#why-choose-us" class="nav-link-item text-xs xl:text-sm font-medium text-slate-300 hover:text-teal-400 transition-colors whitespace-nowrap">Why Us</a>
+          <a href="#process" class="nav-link-item text-xs xl:text-sm font-medium text-slate-300 hover:text-teal-400 transition-colors whitespace-nowrap">Process</a>
+          <a href="#case-studies" class="nav-link-item text-xs xl:text-sm font-medium text-slate-300 hover:text-teal-400 transition-colors whitespace-nowrap">Case Studies</a>
+          <a href="#about" class="nav-link-item text-xs xl:text-sm font-medium text-slate-300 hover:text-teal-400 transition-colors whitespace-nowrap">About</a>
+          <a href="#insights" class="nav-link-item text-xs xl:text-sm font-medium text-slate-300 hover:text-teal-400 transition-colors whitespace-nowrap">Insights</a>
+        </nav>
+
+        <!-- Right Action Controls -->
+        <div class="flex items-center gap-2.5 sm:gap-3 shrink-0">
+          <!-- Theme Toggle -->
+          <button class="theme-toggle-btn p-2 rounded-xl border border-white/10 hover:border-teal-400/50 bg-slate-900/60 text-slate-300 hover:text-teal-400 transition-all" aria-label="Toggle Dark/Light Mode">
+            <i data-lucide="sun" class="w-4 h-4 theme-toggle-icon"></i>
+          </button>
+
+          <!-- Book Consultation CTA -->
+          <a href="#contact" class="open-booking-modal-btn hidden sm:inline-flex items-center gap-2 px-3.5 xl:px-5 py-2 xl:py-2.5 rounded-xl bg-gradient-to-r from-teal-400 to-sky-400 hover:from-teal-300 hover:to-sky-300 text-slate-950 font-bold text-[11px] xl:text-xs uppercase tracking-wider shadow-lg shadow-teal-500/25 hover:shadow-teal-500/40 hover:-translate-y-0.5 transition-all whitespace-nowrap">
+            <span>Book Consultation</span>
+            <i data-lucide="calendar" class="w-3.5 h-3.5 xl:w-4 xl:h-4"></i>
+          </a>
+
+          <!-- Mobile Hamburger Menu Button -->
+          <button id="mobileMenuToggleBtn" class="lg:hidden p-2 rounded-xl border border-white/10 text-slate-300 hover:text-white" aria-label="Open Mobile Menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobileMenuDrawer" class="hidden lg:hidden glass-panel border-b border-white/10 px-6 py-6 transition-all">
+      <div class="flex flex-col gap-4">
+        <a href="#services" class="mobile-nav-link text-base font-medium text-slate-200 hover:text-teal-400">Services</a>
+        <a href="#interactive-demo" class="mobile-nav-link text-base font-medium text-slate-200 hover:text-teal-400">Live Demo</a>
+        <a href="#technologies" class="mobile-nav-link text-base font-medium text-slate-200 hover:text-teal-400">Technologies</a>
+        <a href="#why-choose-us" class="mobile-nav-link text-base font-medium text-slate-200 hover:text-teal-400">Why Choose Us</a>
+        <a href="#process" class="mobile-nav-link text-base font-medium text-slate-200 hover:text-teal-400">Process</a>
+        <a href="#case-studies" class="mobile-nav-link text-base font-medium text-slate-200 hover:text-teal-400">Case Studies</a>
+        <a href="#about" class="mobile-nav-link text-base font-medium text-slate-200 hover:text-teal-400">About Us</a>
+        <a href="#insights" class="mobile-nav-link text-base font-medium text-slate-200 hover:text-teal-400">Insights</a>
+        <div class="pt-4 border-t border-white/10">
+          <button class="open-booking-modal-btn w-full py-3 rounded-xl bg-gradient-to-r from-teal-400 to-sky-400 text-slate-950 font-bold text-sm tracking-wider uppercase flex items-center justify-center gap-2">
+            <span>Book Free Consultation</span>
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       Hero Section
+       ======================================================================== -->
+  <section id="hero" class="relative pt-36 pb-20 lg:pt-44 lg:pb-32 overflow-hidden z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Prominent Brand Logo Showcase in Hero -->
+      <div class="flex justify-center mb-8">
+        <div class="relative group">
+          <div class="absolute -inset-2 bg-gradient-to-r from-teal-400 via-sky-500 to-purple-600 rounded-3xl blur-lg opacity-40 group-hover:opacity-70 transition duration-500"></div>
+          <div class="relative w-32 h-32 sm:w-40 sm:h-40 bg-white rounded-3xl p-3 shadow-2xl flex items-center justify-center border border-white/40">
+            <img src="logo.jpg" alt="Data Anatech Labs" class="w-full h-full object-contain rounded-2xl" loading="eager">
+          </div>
+        </div>
+      </div>
+
+      <!-- Top Announcement Badge -->
+      <div class="flex justify-center mb-6">
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-panel border border-teal-500/30 text-xs font-semibold text-teal-300">
+          <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+          <span>NEXT-GEN ENTERPRISE DATA & AI CONSULTING</span>
+          <span class="text-slate-500">|</span>
+          <span class="text-slate-300">Power BI &bull; Fabric &bull; Snowflake &bull; GenAI</span>
+        </div>
+      </div>
+
+      <!-- Main Headline & Subheadline -->
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1] mb-6">
+          Transform Data Into <br>
+          <span class="gradient-text">Business Growth</span>
+        </h1>
+        <p class="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10">
+          Data Anatech Labs helps organizations unlock the full potential of their data with Analytics, AI, Automation, and Modern Data Engineering solutions.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+          <a href="#contact" class="open-booking-modal-btn w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-teal-400 via-sky-400 to-teal-400 bg-[length:200%_auto] hover:bg-right hover:shadow-2xl hover:shadow-teal-500/30 text-slate-950 font-bold text-sm uppercase tracking-wider transition-all duration-300 hover:-translate-y-1">
+            <span>Book Free Consultation</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <a href="#services" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl glass-panel glass-panel-hover text-white font-semibold text-sm transition-all duration-300">
+            <i data-lucide="layers" class="w-4 h-4 text-teal-400"></i>
+            <span>View Services</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Visual: 3D AI Glassmorphism Live Dashboard Preview -->
+      <div class="relative max-w-5xl mx-auto mt-6">
+        <!-- Glow backing -->
+        <div class="absolute -inset-1 bg-gradient-to-r from-teal-500 via-sky-500 to-purple-600 rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition duration-1000"></div>
+
+        <div class="relative glass-panel rounded-2xl overflow-hidden border border-white/15 p-4 sm:p-6 shadow-2xl">
+          
+          <!-- Top Window Control Header -->
+          <div class="flex flex-wrap items-center justify-between pb-4 mb-5 border-b border-white/10 gap-3">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+              <span class="ml-2 font-mono text-xs text-slate-400">data-mesh-control-plane.anatechlabs.cloud</span>
+            </div>
+            <div class="flex items-center gap-3 text-xs">
+              <span class="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-teal-500/10 text-teal-400 border border-teal-500/20 font-mono">
+                <span class="w-2 h-2 rounded-full bg-teal-400 animate-ping"></span>
+                LIVE PIPELINE
+              </span>
+              <div class="inline-flex rounded-lg border border-white/10 p-0.5 bg-slate-900/60">
+                <button class="hero-timeframe-btn px-2.5 py-1 rounded text-xs text-slate-400 hover:text-white" data-frame="1M">1M</button>
+                <button class="hero-timeframe-btn px-2.5 py-1 rounded text-xs text-slate-400 hover:text-white" data-frame="3M">3M</button>
+                <button class="hero-timeframe-btn px-2.5 py-1 rounded text-xs bg-teal-500/20 text-teal-400 border border-teal-500/40" data-frame="1Y">1Y</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero KPI Quick Strip -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            <div class="p-3.5 rounded-xl bg-slate-900/50 border border-white/5">
+              <div class="text-xs text-slate-400 mb-1 flex items-center justify-between">
+                <span>Revenue Impact</span>
+                <i data-lucide="trending-up" class="w-3.5 h-3.5 text-teal-400"></i>
+              </div>
+              <div class="text-xl sm:text-2xl font-bold text-white">$14.8M</div>
+              <div class="text-[11px] text-teal-400 font-medium mt-1">+28.4% YoY Uplift</div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-900/50 border border-white/5">
+              <div class="text-xs text-slate-400 mb-1 flex items-center justify-between">
+                <span>ETL Latency</span>
+                <i data-lucide="zap" class="w-3.5 h-3.5 text-sky-400"></i>
+              </div>
+              <div class="text-xl sm:text-2xl font-bold text-white">12.4 ms</div>
+              <div class="text-[11px] text-sky-400 font-medium mt-1">-65% Cloud Wait</div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-900/50 border border-white/5">
+              <div class="text-xs text-slate-400 mb-1 flex items-center justify-between">
+                <span>Model Accuracy</span>
+                <i data-lucide="brain-circuit" class="w-3.5 h-3.5 text-purple-400"></i>
+              </div>
+              <div class="text-xl sm:text-2xl font-bold text-white">99.2%</div>
+              <div class="text-[11px] text-purple-400 font-medium mt-1">Churn & Demand AI</div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-900/50 border border-white/5">
+              <div class="text-xs text-slate-400 mb-1 flex items-center justify-between">
+                <span>Active Fabric Mesh</span>
+                <i data-lucide="database" class="w-3.5 h-3.5 text-emerald-400"></i>
+              </div>
+              <div class="text-xl sm:text-2xl font-bold text-white">2.4 TB/day</div>
+              <div class="text-[11px] text-emerald-400 font-medium mt-1">DirectLake Ingestion</div>
+            </div>
+          </div>
+
+          <!-- Live Interactive Chart Canvas -->
+          <div class="h-64 sm:h-72 w-full relative">
+            <canvas id="heroChartCanvas"></canvas>
+          </div>
+
+          <!-- Bottom Visual Bar: Mini Integrations -->
+          <div class="mt-4 pt-3 border-t border-white/5 flex flex-wrap items-center justify-between text-xs text-slate-400 gap-2">
+            <div class="flex items-center gap-3">
+              <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-teal-400"></span> Synced: Power BI DirectLake</span>
+              <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-sky-400"></span> Snowflake Warehouse</span>
+              <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-purple-400"></span> Azure Databricks</span>
+            </div>
+            <div class="font-mono text-[11px] text-teal-400">Zero-Downtime Guarantee &bull; SOC2 SLA</div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Client Logo Showcase / Enterprise Trust Bar
+       ======================================================================== -->
+  <section class="py-10 border-y border-white/5 bg-slate-950/40 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-center text-xs font-semibold uppercase tracking-widest text-slate-400 mb-6">
+        Trusted by Forward-Thinking Startups, SMEs & Enterprise Data Leaders
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-14 opacity-75 grayscale hover:grayscale-0 transition-all duration-300">
+        <div class="flex items-center gap-2 text-slate-300 font-bold tracking-tight text-base sm:text-lg">
+          <i data-lucide="brain-circuit" class="w-6 h-6 text-teal-400"></i> Data Science Wizards
+        </div>
+        <div class="flex items-center gap-2 text-slate-300 font-bold tracking-tight text-base sm:text-lg">
+          <i data-lucide="box" class="w-6 h-6 text-sky-400"></i> Bizongo
+        </div>
+        <div class="flex items-center gap-2 text-slate-300 font-bold tracking-tight text-base sm:text-lg">
+          <i data-lucide="layers" class="w-6 h-6 text-purple-400"></i> Synergy Group
+        </div>
+        <div class="flex items-center gap-2 text-slate-300 font-bold tracking-tight text-base sm:text-lg">
+          <i data-lucide="anchor" class="w-6 h-6 text-emerald-400"></i> MTM Shipping Pvt Ltd
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       About Us Section ("Who We Are") & Statistics
+       ======================================================================== -->
+  <section id="about" class="py-24 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Column: Narrative -->
+        <div class="lg:col-span-7">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-teal-500/30 text-xs font-semibold text-teal-300 mb-4">
+            <i data-lucide="compass" class="w-3.5 h-3.5"></i>
+            <span>WHO WE ARE</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-6">
+            Empowering Organizations to Make Smarter, <span class="gradient-text">Data-Driven Decisions</span>
+          </h2>
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed mb-6">
+            At <strong>Data Anatech Labs</strong>, we empower organizations to make smarter decisions through cutting-edge data solutions. Our expertise spans data engineering, business intelligence, cloud migration, automation, and artificial intelligence, enabling businesses to accelerate growth, improve efficiency, and gain competitive advantage.
+          </p>
+          <p class="text-sm sm:text-base text-slate-400 leading-relaxed mb-8">
+            Whether you are a fast-scaling startup needing automated executive reporting or a Fortune 500 enterprise modernizing petabyte-scale lakehouses into Microsoft Fabric and Snowflake, our specialized engineering pods deliver fast, measurable business ROI.
+          </p>
+
+          <!-- Core Value Bullet Points -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-900/60 border border-white/5">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-teal-400 shrink-0 mt-0.5"></i>
+              <div>
+                <h4 class="text-sm font-semibold text-white">Business-First Outcomes</h4>
+                <p class="text-xs text-slate-400">Translating raw data architecture directly into revenue expansion and expense reduction.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-900/60 border border-white/5">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-teal-400 shrink-0 mt-0.5"></i>
+              <div>
+                <h4 class="text-sm font-semibold text-white">Full-Lifecycle Delivery</h4>
+                <p class="text-xs text-slate-400">From discovery, ETL pipelines, and warehouse modeling to self-service Power BI and custom AI.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Animated Statistics Box -->
+        <div id="stats-section" class="lg:col-span-5">
+          <div class="glass-panel p-8 rounded-3xl border border-white/10 relative overflow-hidden">
+            <div class="absolute -top-24 -right-24 w-60 h-60 bg-teal-500/20 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="text-center mb-8">
+              <span class="text-xs font-mono uppercase tracking-widest text-teal-400">Proven Track Record</span>
+              <h3 class="text-2xl font-bold text-white mt-1">Impact in Numbers</h3>
+            </div>
+
+            <div class="grid grid-cols-2 gap-6">
+              <!-- Stat 1 -->
+              <div class="p-5 rounded-2xl bg-slate-900/70 border border-white/5 text-center group hover:border-teal-500/30 transition-all">
+                <div class="text-3xl sm:text-4xl font-extrabold text-teal-400 counter-val" data-target="50" data-suffix="+">0</div>
+                <div class="text-xs sm:text-sm font-medium text-slate-300 mt-2">Projects Delivered</div>
+                <div class="text-[10px] text-slate-500 mt-0.5">Across 8+ Global Sectors</div>
+              </div>
+
+              <!-- Stat 2 -->
+              <div class="p-5 rounded-2xl bg-slate-900/70 border border-white/5 text-center group hover:border-sky-500/30 transition-all">
+                <div class="text-3xl sm:text-4xl font-extrabold text-sky-400 counter-val" data-target="20" data-suffix="+">0</div>
+                <div class="text-xs sm:text-sm font-medium text-slate-300 mt-2">Happy Clients</div>
+                <div class="text-[10px] text-slate-500 mt-0.5">Startups to Enterprises</div>
+              </div>
+
+              <!-- Stat 3 -->
+              <div class="p-5 rounded-2xl bg-slate-900/70 border border-white/5 text-center group hover:border-purple-500/30 transition-all">
+                <div class="text-3xl sm:text-4xl font-extrabold text-purple-400 counter-val" data-target="99" data-suffix="%">0</div>
+                <div class="text-xs sm:text-sm font-medium text-slate-300 mt-2">Client Satisfaction</div>
+                <div class="text-[10px] text-slate-500 mt-0.5">Top-Tier Retention & NPS</div>
+              </div>
+
+              <!-- Stat 4 -->
+              <div class="p-5 rounded-2xl bg-slate-900/70 border border-white/5 text-center group hover:border-emerald-500/30 transition-all">
+                <div class="text-3xl sm:text-4xl font-extrabold text-emerald-400 counter-val" data-target="10" data-suffix="M+">0</div>
+                <div class="text-xs sm:text-sm font-medium text-slate-300 mt-2">Records Processed</div>
+                <div class="text-[10px] text-slate-500 mt-0.5">High-Velocity Pipelines</div>
+              </div>
+            </div>
+
+            <div class="mt-8 text-center">
+              <a href="#case-studies" class="inline-flex items-center gap-2 text-xs font-semibold text-teal-400 hover:text-teal-300 transition-colors">
+                <span>View verified client case studies</span>
+                <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Core Services Section
+       ======================================================================== -->
+  <section id="services" class="py-24 border-t border-white/5 relative z-10 bg-slate-950/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-teal-500/30 text-xs font-semibold text-teal-300 mb-3">
+          <i data-lucide="cpu" class="w-3.5 h-3.5"></i>
+          <span>ENTERPRISE CAPABILITIES</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Our Core Services</h2>
+        <p class="text-slate-300 text-base sm:text-lg mt-4">
+          End-to-end data transformation tailored for CFOs, CIOs, Data Leaders, and Operations Teams.
+        </p>
+      </div>
+
+      <!-- Services Category Filter Chips -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
+        <button class="service-filter-btn px-4 py-2 rounded-xl text-xs font-semibold border border-teal-400 text-teal-400 bg-teal-500/10 transition-all active" data-service-filter="all">All Services (6)</button>
+        <button class="service-filter-btn px-4 py-2 rounded-xl text-xs font-semibold border border-slate-700/60 text-slate-400 hover:border-slate-500 transition-all" data-service-filter="analytics">Data Analytics & BI</button>
+        <button class="service-filter-btn px-4 py-2 rounded-xl text-xs font-semibold border border-slate-700/60 text-slate-400 hover:border-slate-500 transition-all" data-service-filter="engineering">Data Engineering</button>
+        <button class="service-filter-btn px-4 py-2 rounded-xl text-xs font-semibold border border-slate-700/60 text-slate-400 hover:border-slate-500 transition-all" data-service-filter="migration">Data Migration</button>
+        <button class="service-filter-btn px-4 py-2 rounded-xl text-xs font-semibold border border-slate-700/60 text-slate-400 hover:border-slate-500 transition-all" data-service-filter="automation">Process Automation</button>
+        <button class="service-filter-btn px-4 py-2 rounded-xl text-xs font-semibold border border-slate-700/60 text-slate-400 hover:border-slate-500 transition-all" data-service-filter="ai">AI Solutions</button>
+        <button class="service-filter-btn px-4 py-2 rounded-xl text-xs font-semibold border border-slate-700/60 text-slate-400 hover:border-slate-500 transition-all" data-service-filter="problem-solving">Problem Solving</button>
+      </div>
+
+      <!-- Services Grid (6 Comprehensive Services) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Service 1: Data Analytics & Dashboard Development -->
+        <div class="service-card-item glass-panel glass-panel-hover p-8 rounded-3xl relative flex flex-col justify-between" data-category="analytics">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 mb-6">
+              <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+            </div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-mono text-teal-400 uppercase tracking-wider">Service 01</span>
+              <span class="pill-tag px-2 py-0.5 rounded text-[10px] font-semibold">Executive BI</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Data Analytics & Dashboard Development</h3>
+            <p class="text-sm text-slate-300 leading-relaxed mb-6">
+              Interactive visual command centers designed for executive clarity and operational speed across all enterprise platforms.
+            </p>
+            
+            <div class="mb-5">
+              <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2">Platforms:</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 border border-white/5">Microsoft Power BI</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 border border-white/5">Tableau</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 border border-white/5">Looker Studio</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 border border-white/5">Excel Analytics</span>
+              </div>
+            </div>
+
+            <div>
+              <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2">Key Features:</span>
+              <ul class="text-xs text-slate-300 space-y-2">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-teal-400"></i> Executive Dashboards & Board-Ready Views</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-teal-400"></i> Real-Time KPI Tracking & Alert Triggers</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-teal-400"></i> Governed Self-Service BI Semantic Models</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-teal-400"></i> Interactive Paginated Reporting</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-8 pt-4 border-t border-white/5">
+            <a href="#interactive-demo" class="inline-flex items-center gap-2 text-xs font-bold text-teal-400 hover:text-teal-300">
+              <span>Explore Live Dashboard Demo</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 2: Data Engineering -->
+        <div class="service-card-item glass-panel glass-panel-hover p-8 rounded-3xl relative flex flex-col justify-between" data-category="engineering">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 mb-6">
+              <i data-lucide="git-merge" class="w-6 h-6"></i>
+            </div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-mono text-sky-400 uppercase tracking-wider">Service 02</span>
+              <span class="pill-blue px-2 py-0.5 rounded text-[10px] font-semibold">Pipelines & Lakes</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Data Engineering</h3>
+            <p class="text-sm text-slate-300 leading-relaxed mb-6">
+              Industrial-grade ingestion pipelines, modern lakehouses, and high-performance data warehouses built for scale and cost optimization.
+            </p>
+            
+            <div class="mb-5">
+              <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2">Ecosystem:</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 border border-white/5">Azure Data Factory</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 border border-white/5">Microsoft Fabric</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 border border-white/5">Databricks</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 border border-white/5">Snowflake</span>
+              </div>
+            </div>
+
+            <div>
+              <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2">Key Features:</span>
+              <ul class="text-xs text-slate-300 space-y-2">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> Resilient ETL/ELT Streaming & Batch Pipelines</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> Modern Cloud Data Warehousing (Star & Snowflake Schema)</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> Medallion Architecture Data Lakes (Bronze/Silver/Gold)</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-400"></i> Automated DataOps & CI/CD Deployment</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-8 pt-4 border-t border-white/5">
+            <a href="#interactive-demo" class="inline-flex items-center gap-2 text-xs font-bold text-sky-400 hover:text-sky-300">
+              <span>View Data Pipeline Simulator</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 3: Data Migration -->
+        <div class="service-card-item glass-panel glass-panel-hover p-8 rounded-3xl relative flex flex-col justify-between" data-category="migration">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-6">
+              <i data-lucide="cloud-lightning" class="w-6 h-6"></i>
+            </div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-mono text-purple-400 uppercase tracking-wider">Service 03</span>
+              <span class="pill-purple px-2 py-0.5 rounded text-[10px] font-semibold">Zero Downtime</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Data Migration</h3>
+            <p class="text-sm text-slate-300 leading-relaxed mb-6">
+              Risk-free, seamless transitions from legacy on-premises databases into high-speed modern cloud data warehouses.
+            </p>
+            
+            <div class="mb-5">
+              <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2">Focus Areas:</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 border border-white/5">Legacy to Cloud</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 border border-white/5">SQL & Oracle Modernization</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 border border-white/5">Lakehouse Consolidation</span>
+              </div>
+            </div>
+
+            <div>
+              <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2">Key Features:</span>
+              <ul class="text-xs text-slate-300 space-y-2">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-purple-400"></i> Zero-Downtime Migration Strategy & Cutover</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-purple-400"></i> Automated Schema & Stored Procedure Translation</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-purple-400"></i> Strict Data Quality & Parity Validation Matrices</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-purple-400"></i> Post-Migration Query Performance Optimization</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-8 pt-4 border-t border-white/5">
+            <a href="#contact" class="open-booking-modal-btn inline-flex items-center gap-2 text-xs font-bold text-purple-400 hover:text-purple-300">
+              <span>Request Migration Roadmap</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 4: Business Process Automation -->
+        <div class="service-card-item glass-panel glass-panel-hover p-8 rounded-3xl relative flex flex-col justify-between" data-category="automation">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-6">
+              <i data-lucide="refresh-cw" class="w-6 h-6"></i>
+            </div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-mono text-amber-400 uppercase tracking-wider">Service 04</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/30">80% Time Saved</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Business Process Automation</h3>
+            <p class="text-sm text-slate-300 leading-relaxed mb-6">
+              Eliminate repetitive manual data preparation, error-prone spreadsheets, and redundant operations through intelligent workflows.
+            </p>
+            
+            <div class="mb-5">
+              <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2">Platforms:</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 border border-white/5">Power Automate</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 border border-white/5">UiPath RPA</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 border border-white/5">Azure Logic Apps</span>
+              </div>
+            </div>
+
+            <div>
+              <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2">Key Features:</span>
+              <ul class="text-xs text-slate-300 space-y-2">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> Robotic Process Automation (RPA) Bots</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> End-to-End Scheduled Report Generation</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> Cross-App Data Synchronization & Webhooks</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> Real-Time Anomaly & Failure Alerts</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-8 pt-4 border-t border-white/5">
+            <a href="#interactive-demo" class="inline-flex items-center gap-2 text-xs font-bold text-amber-400 hover:text-amber-300">
+              <span>Calculate Automation ROI</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 5: Artificial Intelligence Solutions -->
+        <div class="service-card-item glass-panel glass-panel-hover p-8 rounded-3xl relative flex flex-col justify-between" data-category="ai">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-teal-400/10 border border-teal-400/30 flex items-center justify-center text-teal-300 mb-6">
+              <i data-lucide="sparkles" class="w-6 h-6"></i>
+            </div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-mono text-teal-300 uppercase tracking-wider">Service 05</span>
+              <span class="pill-tag px-2 py-0.5 rounded text-[10px] font-semibold">GenAI & ML</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Artificial Intelligence Solutions</h3>
+            <p class="text-sm text-slate-300 leading-relaxed mb-6">
+              Custom machine learning algorithms, predictive scoring models, and enterprise Generative AI copilots integrated securely.
+            </p>
+            
+            <div class="mb-5">
+              <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2">Tech Stack:</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 border border-white/5">OpenAI</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 border border-white/5">Azure AI</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 border border-white/5">TensorFlow</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 border border-white/5">LangChain</span>
+              </div>
+            </div>
+
+            <div>
+              <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2">Key Features:</span>
+              <ul class="text-xs text-slate-300 space-y-2">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-teal-400"></i> Predictive Analytics & Demand Forecasting</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-teal-400"></i> Domain-Tuned GenAI Chatbots & RAG Pipelines</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-teal-400"></i> Personalized Recommendation Engines</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-teal-400"></i> Computer Vision & Document Intelligence</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-8 pt-4 border-t border-white/5">
+            <a href="#interactive-demo" class="inline-flex items-center gap-2 text-xs font-bold text-teal-300 hover:text-teal-200">
+              <span>Test Interactive AI Model</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 6: Business Problem Solving Through Data -->
+        <div class="service-card-item glass-panel glass-panel-hover p-8 rounded-3xl relative flex flex-col justify-between" data-category="problem-solving">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 mb-6">
+              <i data-lucide="target" class="w-6 h-6"></i>
+            </div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-mono text-indigo-400 uppercase tracking-wider">Service 06</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/30">Strategic Impact</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Business Problem Solving Through Data</h3>
+            <p class="text-sm text-slate-300 leading-relaxed mb-6">
+              Translating business friction into quantitative models that drive profitability, customer retention, and operational excellence.
+            </p>
+            
+            <div class="mb-5">
+              <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2">Domains:</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 border border-white/5">Finance</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 border border-white/5">Retail & E-Com</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 border border-white/5">Supply Chain</span>
+                <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 border border-white/5">SaaS & B2B</span>
+              </div>
+            </div>
+
+            <div>
+              <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2">Key Features:</span>
+              <ul class="text-xs text-slate-300 space-y-2">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i> Customer Analytics & Churn Risk Mitigation</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i> Dynamic Sales Pipeline & Pricing Optimization</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i> Supply Chain Latency & Inventory Balance</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i> Operational Bottleneck Elimination</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-8 pt-4 border-t border-white/5">
+            <a href="#contact" class="open-booking-modal-btn inline-flex items-center gap-2 text-xs font-bold text-indigo-400 hover:text-indigo-300">
+              <span>Book Strategic Assessment</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Extra Premium Feature: Interactive Dashboard Demos & Visualizer
+       ======================================================================== -->
+  <section id="interactive-demo" class="py-24 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-teal-500/30 text-xs font-semibold text-teal-300 mb-3">
+          <i data-lucide="monitor" class="w-3.5 h-3.5"></i>
+          <span>LIVE ARCHITECTURE DEMOS</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Experience Our Solutions Live</h2>
+        <p class="text-slate-300 text-base sm:text-lg mt-3">
+          Test drive executive dashboards, simulate automated cloud pipelines, and forecast your enterprise ROI in real-time.
+        </p>
+      </div>
+
+      <!-- Demo Tab Switcher -->
+      <div class="flex justify-center mb-8">
+        <div class="inline-flex p-1.5 rounded-2xl glass-panel border border-white/10 gap-1 sm:gap-2">
+          <button class="demo-tab-btn active px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold border-b-2 border-teal-400 text-teal-400 bg-teal-500/10 transition-all" data-target="demo-bi">
+            <i data-lucide="pie-chart" class="w-4 h-4 inline mr-1.5"></i>
+            <span>Executive BI Dashboard</span>
+          </button>
+          <button class="demo-tab-btn px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-slate-400 border-b-2 border-transparent hover:text-white transition-all" data-target="demo-pipeline">
+            <i data-lucide="network" class="w-4 h-4 inline mr-1.5"></i>
+            <span>Live Pipeline Mesh</span>
+          </button>
+          <button class="demo-tab-btn px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-slate-400 border-b-2 border-transparent hover:text-white transition-all" data-target="demo-roi">
+            <i data-lucide="calculator" class="w-4 h-4 inline mr-1.5"></i>
+            <span>AI ROI & Churn Forecaster</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Demo Container -->
+      <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-white/15 shadow-2xl relative">
+        
+        <!-- Tab 1: Executive BI Dashboard (Power BI / Tableau Preview) -->
+        <div id="demo-bi" class="demo-panel">
+          <div class="flex flex-wrap items-center justify-between pb-4 mb-6 border-b border-white/10 gap-4">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-teal-400"></span>
+                <h3 class="text-lg font-bold text-white">Global Revenue & Target Attainment</h3>
+              </div>
+              <p class="text-xs text-slate-400 mt-0.5">Power BI DirectLake Simulation &bull; Refreshed real-time from Snowflake</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-mono px-3 py-1 rounded-lg bg-teal-500/10 text-teal-300 border border-teal-500/30">
+                PBI Model: DirectLake Active
+              </span>
+            </div>
+          </div>
+
+          <!-- Quick Interactive Metrics -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            <div class="p-4 rounded-xl bg-slate-900/60 border border-white/5">
+              <span class="text-xs text-slate-400">Total ARR</span>
+              <div class="text-2xl font-extrabold text-white mt-1">$90.6M</div>
+              <span class="text-xs text-emerald-400 font-semibold">+18.2% vs budget</span>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-900/60 border border-white/5">
+              <span class="text-xs text-slate-400">Avg Deal Size</span>
+              <div class="text-2xl font-extrabold text-white mt-1">$142,500</div>
+              <span class="text-xs text-emerald-400 font-semibold">+9.4% YoY</span>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-900/60 border border-white/5">
+              <span class="text-xs text-slate-400">Executive Query Latency</span>
+              <div class="text-2xl font-extrabold text-teal-400 mt-1">110 ms</div>
+              <span class="text-xs text-teal-300 font-semibold">Sub-second caching</span>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-900/60 border border-white/5">
+              <span class="text-xs text-slate-400">Customer Retention</span>
+              <div class="text-2xl font-extrabold text-purple-400 mt-1">96.8%</div>
+              <span class="text-xs text-purple-300 font-semibold">Top quartile SaaS</span>
+            </div>
+          </div>
+
+          <!-- Chart Area -->
+          <div class="h-72 sm:h-80 w-full">
+            <canvas id="biDashboardCanvas"></canvas>
+          </div>
+        </div>
+
+        <!-- Tab 2: Live Pipeline Visualizer -->
+        <div id="demo-pipeline" class="demo-panel hidden">
+          <div class="flex flex-wrap items-center justify-between pb-4 mb-6 border-b border-white/10 gap-4">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-sky-400"></span>
+                <h3 class="text-lg font-bold text-white">Enterprise Data Pipeline Mesh Simulator</h3>
+              </div>
+              <p class="text-xs text-slate-400 mt-0.5">Multi-source ingestion into Azure Data Factory, Databricks, and Fabric Lakehouse</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <span id="pipelineStatusBadge" class="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                ● ACTIVE & OPTIMIZED
+              </span>
+              <button id="triggerPipelineBatchBtn" class="px-4 py-1.5 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 text-xs font-bold transition-all shadow-md">
+                <i data-lucide="play" class="w-3.5 h-3.5 inline mr-1"></i> Trigger New Pipeline Batch
+              </button>
+            </div>
+          </div>
+
+          <!-- Visual Node Flow Diagram -->
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-3 mb-6 relative">
+            
+            <!-- Node 1 -->
+            <div class="p-4 rounded-2xl bg-slate-900/80 border border-white/10 text-center relative group">
+              <div class="w-10 h-10 mx-auto rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 mb-2">
+                <i data-lucide="database" class="w-5 h-5"></i>
+              </div>
+              <div class="text-xs font-bold text-white">Data Sources</div>
+              <div class="text-[10px] text-slate-400 mt-0.5">SAP &bull; Salesforce &bull; SQL</div>
+              <span class="inline-block mt-2 text-[10px] text-sky-400 font-mono">142k rows</span>
+            </div>
+
+            <!-- Node 2 -->
+            <div class="p-4 rounded-2xl bg-slate-900/80 border border-teal-500/30 text-center relative node-pulse">
+              <div class="w-10 h-10 mx-auto rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 mb-2">
+                <i data-lucide="cpu" class="w-5 h-5"></i>
+              </div>
+              <div class="text-xs font-bold text-white">Azure Data Factory</div>
+              <div class="text-[10px] text-slate-400 mt-0.5">ETL / ELT Orchestration</div>
+              <span class="inline-block mt-2 text-[10px] text-teal-400 font-mono">Automated Sync</span>
+            </div>
+
+            <!-- Node 3 -->
+            <div class="p-4 rounded-2xl bg-slate-900/80 border border-purple-500/30 text-center relative">
+              <div class="w-10 h-10 mx-auto rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-2">
+                <i data-lucide="boxes" class="w-5 h-5"></i>
+              </div>
+              <div class="text-xs font-bold text-white">Databricks Lakehouse</div>
+              <div class="text-[10px] text-slate-400 mt-0.5">PySpark Delta Parquet</div>
+              <span class="inline-block mt-2 text-[10px] text-purple-400 font-mono">Cleanse & Model</span>
+            </div>
+
+            <!-- Node 4 -->
+            <div class="p-4 rounded-2xl bg-slate-900/80 border border-teal-500/30 text-center relative">
+              <div class="w-10 h-10 mx-auto rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-300 mb-2">
+                <i data-lucide="brain" class="w-5 h-5"></i>
+              </div>
+              <div class="text-xs font-bold text-white">AI Inference Hub</div>
+              <div class="text-[10px] text-slate-400 mt-0.5">LangChain & Churn ML</div>
+              <span class="inline-block mt-2 text-[10px] text-teal-300 font-mono">99.4% Conf.</span>
+            </div>
+
+            <!-- Node 5 -->
+            <div class="p-4 rounded-2xl bg-slate-900/80 border border-white/10 text-center relative">
+              <div class="w-10 h-10 mx-auto rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-2">
+                <i data-lucide="line-chart" class="w-5 h-5"></i>
+              </div>
+              <div class="text-xs font-bold text-white">Power BI & Reports</div>
+              <div class="text-[10px] text-slate-400 mt-0.5">Executive DirectLake</div>
+              <span class="inline-block mt-2 text-[10px] text-amber-400 font-mono">180 Users</span>
+            </div>
+          </div>
+
+          <!-- Real-time Console Log Stream -->
+          <div class="rounded-2xl bg-slate-950 border border-white/10 p-4">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-mono text-slate-400 flex items-center gap-1.5">
+                <i data-lucide="terminal" class="w-3.5 h-3.5 text-teal-400"></i>
+                DATA PIPELINE EXECUTION STREAM
+              </span>
+              <div class="flex items-center gap-4 text-xs font-mono">
+                <span class="text-slate-400">Throughput: <strong id="pipelineThroughputCounter" class="text-teal-400">1.28M rows/s</strong></span>
+                <span class="text-slate-400">Latency: <strong id="pipelineLatencyBadge" class="text-sky-400">12.4 ms</strong></span>
+              </div>
+            </div>
+            <div id="pipelineConsoleLogs" class="h-32 overflow-y-auto space-y-1 pr-2">
+              <div class="font-mono text-xs text-slate-400 py-0.5">[14:50:02] [ADF Trigger] Scheduled incremental batch initiated from 4 enterprise sources.</div>
+              <div class="font-mono text-xs text-sky-400 py-0.5">[14:50:03] [Extract] Ingesting 142,500 records from SAP HANA & Salesforce CRM...</div>
+              <div class="font-mono text-xs text-purple-400 py-0.5">[14:50:04] [PySpark / Databricks] Executing schema validation & deduplication matrix...</div>
+              <div class="font-mono text-xs text-teal-400 py-0.5">[14:50:05] [Microsoft Fabric / Snowflake] Delta parquet lakehouse partition completed (2.1s).</div>
+              <div class="font-mono text-xs text-emerald-400 py-0.5">[14:50:06] [AI Inference] LangChain & ML model score computed: 0 anomalies, 99.4% confidence.</div>
+              <div class="font-mono text-xs text-teal-300 py-0.5">[14:50:07] [Power BI DirectLake] Semantic model cache synced for 180 executive users.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Interactive ROI & Churn Forecaster -->
+        <div id="demo-roi" class="demo-panel hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <!-- Controls -->
+            <div class="lg:col-span-7 space-y-6">
+              <div>
+                <h3 class="text-lg font-bold text-white">Dynamic Data & AI ROI Forecaster</h3>
+                <p class="text-xs text-slate-400 mt-1">Adjust the sliders to estimate labor hours saved and annual revenue recovered with Data Anatech Labs solutions.</p>
+              </div>
+
+              <!-- Slider 1 -->
+              <div>
+                <div class="flex justify-between text-xs font-semibold mb-2">
+                  <span class="text-slate-300">Monthly Records Ingested:</span>
+                  <span id="calc-records-val" class="text-teal-400 font-mono">150k</span>
+                </div>
+                <input id="calc-records" type="range" min="10" max="1000" step="10" value="150" class="w-full h-2 bg-slate-800 rounded-lg cursor-pointer">
+              </div>
+
+              <!-- Slider 2 -->
+              <div>
+                <div class="flex justify-between text-xs font-semibold mb-2">
+                  <span class="text-slate-300">Manual Reporting Hours / Week (Analysts & Operations):</span>
+                  <span id="calc-hours-val" class="text-sky-400 font-mono">35 hrs/wk</span>
+                </div>
+                <input id="calc-hours" type="range" min="5" max="150" step="5" value="35" class="w-full h-2 bg-slate-800 rounded-lg cursor-pointer">
+              </div>
+
+              <!-- Slider 3 -->
+              <div>
+                <div class="flex justify-between text-xs font-semibold mb-2">
+                  <span class="text-slate-300">Current Customer Churn Rate (%):</span>
+                  <span id="calc-churn-val" class="text-purple-400 font-mono">4.5%</span>
+                </div>
+                <input id="calc-churn" type="range" min="1" max="15" step="0.5" value="4.5" class="w-full h-2 bg-slate-800 rounded-lg cursor-pointer">
+              </div>
+            </div>
+
+            <!-- Result Cards -->
+            <div class="lg:col-span-5">
+              <div class="p-6 rounded-2xl bg-slate-900/90 border border-teal-500/30 text-center relative overflow-hidden">
+                <div class="absolute -top-12 -right-12 w-32 h-32 bg-teal-500/20 rounded-full blur-2xl"></div>
+
+                <span class="text-xs uppercase tracking-wider font-mono text-teal-400">Estimated Annual Value</span>
+                <div id="calc-savings-out" class="text-3xl sm:text-4xl font-extrabold text-white mt-2 mb-2">$184,800</div>
+                <p class="text-xs text-slate-400 mb-6">Net annual impact from automation, error reduction, and retained customers.</p>
+
+                <div class="grid grid-cols-2 gap-3 pt-4 border-t border-white/10 text-left">
+                  <div>
+                    <span class="text-[11px] text-slate-400 block">Hours Reclaimed</span>
+                    <strong id="calc-hours-saved-out" class="text-sm text-sky-400 font-mono">1,456 hrs/yr</strong>
+                  </div>
+                  <div>
+                    <span class="text-[11px] text-slate-400 block">Model Precision</span>
+                    <strong id="calc-accuracy-out" class="text-sm text-purple-400 font-mono">98.5%</strong>
+                  </div>
+                </div>
+
+                <div class="mt-6">
+                  <a href="#contact" class="open-booking-modal-btn w-full block py-2.5 px-4 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition-all">
+                    Lock In Your Custom ROI Plan
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Technology Stack Section ("Technologies We Work With")
+       ======================================================================== -->
+  <section id="technologies" class="py-24 border-t border-white/5 relative z-10 bg-slate-950/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-teal-500/30 text-xs font-semibold text-teal-300 mb-3">
+          <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+          <span>ENTERPRISE TOOLCHAIN</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Technologies We Work With</h2>
+        <p class="text-slate-300 text-base sm:text-lg mt-3">
+          Deep, certified architectural mastery across the world's leading cloud, BI, and AI ecosystems.
+        </p>
+      </div>
+
+      <!-- Tech Category Filter Tabs -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
+        <button class="tech-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-teal-500 text-slate-950 transition-all active" data-tech-filter="all">All Tech</button>
+        <button class="tech-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800/60 text-slate-300 hover:bg-slate-800 transition-all" data-tech-filter="bi">Business Intelligence</button>
+        <button class="tech-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800/60 text-slate-300 hover:bg-slate-800 transition-all" data-tech-filter="cloud">Cloud & Data Platforms</button>
+        <button class="tech-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800/60 text-slate-300 hover:bg-slate-800 transition-all" data-tech-filter="engineering">Data Engineering</button>
+        <button class="tech-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800/60 text-slate-300 hover:bg-slate-800 transition-all" data-tech-filter="automation">Automation</button>
+        <button class="tech-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800/60 text-slate-300 hover:bg-slate-800 transition-all" data-tech-filter="ai">AI & Machine Learning</button>
+      </div>
+
+      <!-- Tech Cards Grid -->
+      <div id="techGridContainer" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        
+        <!-- BI: Power BI -->
+        <div class="tech-item-card glass-panel glass-panel-hover p-5 rounded-2xl flex flex-col justify-between transition-all duration-300" data-tech-category="bi">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-sm">PBI</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 font-mono">BI</span>
+            </div>
+            <h4 class="text-base font-bold text-white">Microsoft Power BI</h4>
+            <p class="text-xs text-slate-400 mt-1">DAX, DirectLake, Paginated Reports & Semantic Modeling.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-teal-400">
+            <span>Enterprise Partner</span>
+            <i data-lucide="check" class="w-3.5 h-3.5"></i>
+          </div>
+        </div>
+
+        <!-- BI: Tableau -->
+        <div class="tech-item-card glass-panel glass-panel-hover p-5 rounded-2xl flex flex-col justify-between transition-all duration-300" data-tech-category="bi">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 font-bold text-sm">TAB</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-sky-500/10 text-sky-400 font-mono">BI</span>
+            </div>
+            <h4 class="text-base font-bold text-white">Tableau</h4>
+            <p class="text-xs text-slate-400 mt-1">Visual Analytics, Prep Builder & Server Governance.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-teal-400">
+            <span>Certified Architecture</span>
+            <i data-lucide="check" class="w-3.5 h-3.5"></i>
+          </div>
+        </div>
+
+        <!-- BI: Looker -->
+        <div class="tech-item-card glass-panel glass-panel-hover p-5 rounded-2xl flex flex-col justify-between transition-all duration-300" data-tech-category="bi">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 font-bold text-sm">LKR</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-teal-500/10 text-teal-400 font-mono">BI</span>
+            </div>
+            <h4 class="text-base font-bold text-white">Looker & Studio</h4>
+            <p class="text-xs text-slate-400 mt-1">LookML Data Modeling, Embedded Dashboards & Alerts.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-teal-400">
+            <span>Multi-Cloud Ready</span>
+            <i data-lucide="check" class="w-3.5 h-3.5"></i>
+          </div>
+        </div>
+
+        <!-- Cloud: Microsoft Fabric -->
+        <div class="tech-item-card glass-panel glass-panel-hover p-5 rounded-2xl flex flex-col justify-between transition-all duration-300" data-tech-category="cloud">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 font-bold text-sm">MSF</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-teal-500/10 text-teal-400 font-mono">Cloud</span>
+            </div>
+            <h4 class="text-base font-bold text-white">Microsoft Fabric</h4>
+            <p class="text-xs text-slate-400 mt-1">Unified OneLake, Synapse Data Engineering & DirectLake.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-teal-400">
+            <span>Specialized Consulting</span>
+            <i data-lucide="check" class="w-3.5 h-3.5"></i>
+          </div>
+        </div>
+
+        <!-- Cloud: Snowflake -->
+        <div class="tech-item-card glass-panel glass-panel-hover p-5 rounded-2xl flex flex-col justify-between transition-all duration-300" data-tech-category="cloud">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 font-bold text-sm">SNF</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-sky-500/10 text-sky-400 font-mono">Cloud</span>
+            </div>
+            <h4 class="text-base font-bold text-white">Snowflake</h4>
+            <p class="text-xs text-slate-400 mt-1">Data Warehousing, Snowpark, Iceberg Tables & Sharing.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-teal-400">
+            <span>Scalable Elastic DB</span>
+            <i data-lucide="check" class="w-3.5 h-3.5"></i>
+          </div>
+        </div>
+
+        <!-- Cloud: Azure -->
+        <div class="tech-item-card glass-panel glass-panel-hover p-5 rounded-2xl flex flex-col justify-between transition-all duration-300" data-tech-category="cloud">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 font-bold text-sm">AZR</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 font-mono">Cloud</span>
+            </div>
+            <h4 class="text-base font-bold text-white">Microsoft Azure</h4>
+            <p class="text-xs text-slate-400 mt-1">Azure Synapse, ADF, Data Lake Storage Gen2, Key Vault.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-teal-400">
+            <span>Enterprise Security</span>
+            <i data-lucide="check" class="w-3.5 h-3.5"></i>
+          </div>
+        </div>
+
+        <!-- Cloud: AWS -->
+        <div class="tech-item-card glass-panel glass-panel-hover p-5 rounded-2xl flex flex-col justify-between transition-all duration-300" data-tech-category="cloud">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-sm">AWS</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 font-mono">Cloud</span>
+            </div>
+            <h4 class="text-base font-bold text-white">AWS Data Services</h4>
+            <p class="text-xs text-slate-400 mt-1">Redshift, S3 Lakehouse, Glue ETL, Athena & EMR.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-teal-400">
+            <span>High Concurrency</span>
+            <i data-lucide="check" class="w-3.5 h-3.5"></i>
+          </div>
+        </div>
+
+        <!-- Engineering: Databricks -->
+        <div class="tech-item-card glass-panel glass-panel-hover p-5 rounded-2xl flex flex-col justify-between transition-all duration-300" data-tech-category="engineering">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-10 h-10 rounded-xl bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400 font-bold text-sm">DBX</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-rose-500/10 text-rose-400 font-mono">Engine</span>
+            </div>
+            <h4 class="text-base font-bold text-white">Databricks</h4>
+            <p class="text-xs text-slate-400 mt-1">Lakehouse Platform, Unity Catalog & Delta Live Tables.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-teal-400">
+            <span>Unified Lakehouse</span>
+            <i data-lucide="check" class="w-3.5 h-3.5"></i>
+          </div>
+        </div>
+
+        <!-- Engineering: PySpark & Python -->
+        <div class="tech-item-card glass-panel glass-panel-hover p-5 rounded-2xl flex flex-col justify-between transition-all duration-300" data-tech-category="engineering">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 font-bold text-sm">PY</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-purple-500/10 text-purple-400 font-mono">Engine</span>
+            </div>
+            <h4 class="text-base font-bold text-white">PySpark & Python</h4>
+            <p class="text-xs text-slate-400 mt-1">Distributed computing, Pandas, Polars & vectorized SQL.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-teal-400">
+            <span>High Performance</span>
+            <i data-lucide="check" class="w-3.5 h-3.5"></i>
+          </div>
+        </div>
+
+        <!-- Automation: Power Automate -->
+        <div class="tech-item-card glass-panel glass-panel-hover p-5 rounded-2xl flex flex-col justify-between transition-all duration-300" data-tech-category="automation">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 font-bold text-sm">PA</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-teal-500/10 text-teal-400 font-mono">Auto</span>
+            </div>
+            <h4 class="text-base font-bold text-white">Power Automate</h4>
+            <p class="text-xs text-slate-400 mt-1">Cloud Flows, Desktop RPA, Approval matrixes & webhooks.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-teal-400">
+            <span>Microsoft 365 Native</span>
+            <i data-lucide="check" class="w-3.5 h-3.5"></i>
+          </div>
+        </div>
+
+        <!-- Automation: UiPath -->
+        <div class="tech-item-card glass-panel glass-panel-hover p-5 rounded-2xl flex flex-col justify-between transition-all duration-300" data-tech-category="automation">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-10 h-10 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-400 font-bold text-sm">UIP</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-orange-500/10 text-orange-400 font-mono">Auto</span>
+            </div>
+            <h4 class="text-base font-bold text-white">UiPath</h4>
+            <p class="text-xs text-slate-400 mt-1">Enterprise Bot Orchestration, OCR & Document Processing.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-teal-400">
+            <span>Zero Human Error</span>
+            <i data-lucide="check" class="w-3.5 h-3.5"></i>
+          </div>
+        </div>
+
+        <!-- AI: OpenAI & LangChain -->
+        <div class="tech-item-card glass-panel glass-panel-hover p-5 rounded-2xl flex flex-col justify-between transition-all duration-300" data-tech-category="ai">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 font-bold text-sm">AI</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-purple-500/10 text-purple-400 font-mono">AI / LLM</span>
+            </div>
+            <h4 class="text-base font-bold text-white">OpenAI & LangChain</h4>
+            <p class="text-xs text-slate-400 mt-1">Autonomous agents, enterprise RAG, vector embeddings.</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-teal-400">
+            <span>Next-Gen GenAI</span>
+            <i data-lucide="check" class="w-3.5 h-3.5"></i>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Why Choose Us Section
+       ======================================================================== -->
+  <section id="why-choose-us" class="py-24 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-teal-500/30 text-xs font-semibold text-teal-300 mb-3">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          <span>THE ANATECH ADVANTAGE</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Why Choose Data Anatech Labs</h2>
+        <p class="text-slate-300 text-base sm:text-lg mt-3">
+          We combine enterprise pedigree with agile speed to deliver measurable ROI.
+        </p>
+      </div>
+
+      <!-- 6 Strategic Pillar Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Card 1 -->
+        <div class="glass-panel glass-panel-hover p-8 rounded-3xl border border-white/10 group">
+          <div class="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="briefcase" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Industry Expertise</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Deep understanding of business and technology. Our seasoned architects bring cross-vertical domain mastery in retail, finance, supply chain, and SaaS.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="glass-panel glass-panel-hover p-8 rounded-3xl border border-white/10 group">
+          <div class="w-12 h-12 rounded-2xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="link" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">End-to-End Solutions</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            From raw data collection and cloud migration to AI implementation and automated C-suite dashboards, we handle every layer of the modern data stack.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="glass-panel glass-panel-hover p-8 rounded-3xl border border-white/10 group">
+          <div class="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="zap" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Faster Delivery</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Agile and scalable data solutions. We utilize battle-tested reusable deployment modules to launch production pipelines and BI suites in weeks, not quarters.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="glass-panel glass-panel-hover p-8 rounded-3xl border border-white/10 group">
+          <div class="w-12 h-12 rounded-2xl bg-teal-400/10 border border-teal-400/30 flex items-center justify-center text-teal-300 mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="compass" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Business-First Approach</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Focus on outcomes, not just technology. We align every data asset directly to clear financial metrics: gross margin expansion, CAC efficiency, and churn prevention.
+          </p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="glass-panel glass-panel-hover p-8 rounded-3xl border border-white/10 group">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Secure & Scalable</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Enterprise-grade architectures built with SOC2, HIPAA, and GDPR compliance, role-based access control, encryption in transit, and multi-region resilience.
+          </p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="glass-panel glass-panel-hover p-8 rounded-3xl border border-white/10 group">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="trending-up" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Cost Effective</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Maximum ROI with optimized solutions. Our lakehouse partitioning and warehouse query tuning systematically eliminate 30–50% of wasted cloud compute fees.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Process Section ("How We Work")
+       ======================================================================== -->
+  <section id="process" class="py-24 border-t border-white/5 relative z-10 bg-slate-950/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-teal-500/30 text-xs font-semibold text-teal-300 mb-3">
+          <i data-lucide="workflow" class="w-3.5 h-3.5"></i>
+          <span>METHODOLOGY</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">How We Work</h2>
+        <p class="text-slate-300 text-base sm:text-lg mt-3">
+          A disciplined, battle-tested 6-step lifecycle ensuring predictable delivery and zero operational surprises.
+        </p>
+      </div>
+
+      <!-- 6-Step Horizontal / Responsive Grid Roadmap -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Step 1 -->
+        <div class="p-6 rounded-2xl glass-panel relative border border-white/10 hover:border-teal-400/40 transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-8 h-8 rounded-lg bg-teal-500/20 text-teal-400 font-mono font-bold text-sm flex items-center justify-center">01</span>
+            <span class="text-[10px] uppercase font-mono text-slate-400">Phase 1</span>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Discovery & Assessment</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Comprehensive audit of your current data silos, pipeline latencies, database schemas, and key executive reporting requirements.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="p-6 rounded-2xl glass-panel relative border border-white/10 hover:border-sky-400/40 transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-8 h-8 rounded-lg bg-sky-500/20 text-sky-400 font-mono font-bold text-sm flex items-center justify-center">02</span>
+            <span class="text-[10px] uppercase font-mono text-slate-400">Phase 2</span>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Data Strategy</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Formulating the target state roadmap, semantic KPI hierarchy, cloud governance protocols, and quantifiable business milestones.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="p-6 rounded-2xl glass-panel relative border border-white/10 hover:border-purple-400/40 transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-400 font-mono font-bold text-sm flex items-center justify-center">03</span>
+            <span class="text-[10px] uppercase font-mono text-slate-400">Phase 3</span>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Design & Architecture</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Engineering scalable data models, Medallion lakehouse tiers (Bronze/Silver/Gold), and automated ingestion blueprints.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="p-6 rounded-2xl glass-panel relative border border-white/10 hover:border-teal-400/40 transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-8 h-8 rounded-lg bg-teal-500/20 text-teal-400 font-mono font-bold text-sm flex items-center justify-center">04</span>
+            <span class="text-[10px] uppercase font-mono text-slate-400">Phase 4</span>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Development</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Agile two-week sprints constructing ETL pipelines in ADF/Databricks, Power BI semantic models, and custom ML predictive models.
+          </p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="p-6 rounded-2xl glass-panel relative border border-white/10 hover:border-amber-400/40 transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 font-mono font-bold text-sm flex items-center justify-center">05</span>
+            <span class="text-[10px] uppercase font-mono text-slate-400">Phase 5</span>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Deployment</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Zero-downtime cutover, data reconciliation testing, role-based access validation, and executive stakeholder training.
+          </p>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="p-6 rounded-2xl glass-panel relative border border-white/10 hover:border-emerald-400/40 transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 font-mono font-bold text-sm flex items-center justify-center">06</span>
+            <span class="text-[10px] uppercase font-mono text-slate-400">Phase 6</span>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Support & Optimization</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Continuous query cost tuning, proactive pipeline telemetry monitoring, model drift retraining, and ongoing feature expansion.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Case Studies Section
+       ======================================================================== -->
+  <section id="case-studies" class="py-24 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-teal-500/30 text-xs font-semibold text-teal-300 mb-3">
+          <i data-lucide="check-square" class="w-3.5 h-3.5"></i>
+          <span>PROVEN RESULTS</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Client Case Studies</h2>
+        <p class="text-slate-300 text-base sm:text-lg mt-3">
+          Real enterprise transformation stories delivering verified efficiency and revenue gains.
+        </p>
+      </div>
+
+      <!-- 3 Featured Case Studies -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Case Study 1 -->
+        <div class="glass-panel glass-panel-hover rounded-3xl overflow-hidden border border-white/10 flex flex-col justify-between">
+          <div class="p-8">
+            <div class="flex items-center justify-between mb-4">
+              <span class="pill-tag px-2.5 py-1 rounded-full text-xs font-semibold">Retail & Commerce</span>
+              <span class="text-xs font-mono text-teal-400 font-bold">+25% REVENUE</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Retail Revenue Expansion via Power BI Dashboards</h3>
+            <p class="text-sm text-slate-300 leading-relaxed mb-6">
+              Retail company increased revenue by <strong>25%</strong> using Power BI executive dashboards, automated store-level basket analysis, and inventory rebalancing.
+            </p>
+            <div class="space-y-2 mb-6">
+              <div class="flex justify-between text-xs">
+                <span class="text-slate-400">Reporting Turnaround:</span>
+                <span class="text-teal-400 font-mono font-semibold">14 Days ➔ 2 Minutes</span>
+              </div>
+              <div class="flex justify-between text-xs">
+                <span class="text-slate-400">Stockout Frequency:</span>
+                <span class="text-emerald-400 font-mono font-semibold">-34% Drop</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 bg-slate-900/40 border-t border-white/5">
+            <button class="open-case-study-btn w-full py-2.5 px-4 rounded-xl glass-panel text-xs font-semibold text-white hover:text-teal-400 flex items-center justify-center gap-2 transition-colors" data-study-id="1">
+              <span>Read Full Case Study</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Case Study 2 -->
+        <div class="glass-panel glass-panel-hover rounded-3xl overflow-hidden border border-white/10 flex flex-col justify-between">
+          <div class="p-8">
+            <div class="flex items-center justify-between mb-4">
+              <span class="pill-blue px-2.5 py-1 rounded-full text-xs font-semibold">Financial Advisory</span>
+              <span class="text-xs font-mono text-sky-400 font-bold">80% EFFORT CUT</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Automated Process Reduced Manual Reporting</h3>
+            <p class="text-sm text-slate-300 leading-relaxed mb-6">
+              Automated reporting process reduced manual reporting effort by <strong>80%</strong> with Microsoft Power Automate, eliminating weekly spreadsheet reconciliation.
+            </p>
+            <div class="space-y-2 mb-6">
+              <div class="flex justify-between text-xs">
+                <span class="text-slate-400">Hours Saved Monthly:</span>
+                <span class="text-sky-400 font-mono font-semibold">120+ Analyst Hours</span>
+              </div>
+              <div class="flex justify-between text-xs">
+                <span class="text-slate-400">Data Discrepancy Rate:</span>
+                <span class="text-emerald-400 font-mono font-semibold">0.0% Perfect Audit</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 bg-slate-900/40 border-t border-white/5">
+            <button class="open-case-study-btn w-full py-2.5 px-4 rounded-xl glass-panel text-xs font-semibold text-white hover:text-teal-400 flex items-center justify-center gap-2 transition-colors" data-study-id="2">
+              <span>Read Full Case Study</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Case Study 3 -->
+        <div class="glass-panel glass-panel-hover rounded-3xl overflow-hidden border border-white/10 flex flex-col justify-between">
+          <div class="p-8">
+            <div class="flex items-center justify-between mb-4">
+              <span class="pill-purple px-2.5 py-1 rounded-full text-xs font-semibold">Logistics & Supply</span>
+              <span class="text-xs font-mono text-purple-400 font-bold">+35% ACCURACY</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">AI Forecasting Model for Predictive Demand</h3>
+            <p class="text-sm text-slate-300 leading-relaxed mb-6">
+              AI forecasting model improved demand prediction accuracy by <strong>35%</strong> using custom Databricks ML models, saving millions in warehouse overhead.
+            </p>
+            <div class="space-y-2 mb-6">
+              <div class="flex justify-between text-xs">
+                <span class="text-slate-400">Annual Overhead Cut:</span>
+                <span class="text-purple-400 font-mono font-semibold">$2.4M Saved</span>
+              </div>
+              <div class="flex justify-between text-xs">
+                <span class="text-slate-400">Inference Speed:</span>
+                <span class="text-emerald-400 font-mono font-semibold">&lt; 45ms Latency</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 bg-slate-900/40 border-t border-white/5">
+            <button class="open-case-study-btn w-full py-2.5 px-4 rounded-xl glass-panel text-xs font-semibold text-white hover:text-teal-400 flex items-center justify-center gap-2 transition-colors" data-study-id="3">
+              <span>Read Full Case Study</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       Blog / Insights Section
+       ======================================================================== -->
+  <section id="insights" class="py-24 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-teal-500/30 text-xs font-semibold text-teal-300 mb-3">
+          <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
+          <span>DATA & AI PERSPECTIVES</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Latest Insights</h2>
+        <p class="text-slate-300 text-base sm:text-lg mt-3">
+          Thought leadership and architectural guides from our senior engineers.
+        </p>
+      </div>
+
+      <!-- Blog Grid (3 Articles) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Article 1 -->
+        <article class="glass-panel glass-panel-hover rounded-3xl overflow-hidden border border-white/10 group flex flex-col justify-between">
+          <div class="p-6">
+            <div class="flex items-center justify-between text-xs text-slate-400 mb-3">
+              <span class="pill-tag px-2 py-0.5 rounded text-[10px] font-semibold">Architecture</span>
+              <span>5 min read</span>
+            </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-teal-400 transition-colors mb-2">
+              Microsoft Fabric vs Snowflake: The 2026 Strategic Architecture Decision Guide
+            </h3>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              A comprehensive breakdown of OneLake DirectLake capabilities versus Snowflake Iceberg tables for C-level data leaders.
+            </p>
+          </div>
+          <div class="p-6 pt-0 flex items-center justify-between text-xs text-teal-400 font-semibold">
+            <span>Read Strategy Guide</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="glass-panel glass-panel-hover rounded-3xl overflow-hidden border border-white/10 group flex flex-col justify-between">
+          <div class="p-6">
+            <div class="flex items-center justify-between text-xs text-slate-400 mb-3">
+              <span class="pill-purple px-2 py-0.5 rounded text-[10px] font-semibold">Generative AI</span>
+              <span>7 min read</span>
+            </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-purple-400 transition-colors mb-2">
+              How GenAI & LangChain Redefine Real-Time Executive BI
+            </h3>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              How natural language querying over governed semantic models enables non-technical leadership to pull answers in seconds.
+            </p>
+          </div>
+          <div class="p-6 pt-0 flex items-center justify-between text-xs text-purple-400 font-semibold">
+            <span>Read AI Playbook</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="glass-panel glass-panel-hover rounded-3xl overflow-hidden border border-white/10 group flex flex-col justify-between">
+          <div class="p-6">
+            <div class="flex items-center justify-between text-xs text-slate-400 mb-3">
+              <span class="pill-blue px-2 py-0.5 rounded text-[10px] font-semibold">Automation</span>
+              <span>4 min read</span>
+            </div>
+            <h3 class="text-lg font-bold text-white group-hover:text-sky-400 transition-colors mb-2">
+              The 5-Step Playbook to Automate 80% of Finance Reporting
+            </h3>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              Eliminate manual copy-paste spreadsheet drills using Power Automate, Azure Logic Apps, and standardized audit logs.
+            </p>
+          </div>
+          <div class="p-6 pt-0 flex items-center justify-between text-xs text-sky-400 font-semibold">
+            <span>Read Automation Guide</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Contact Section ("Let's Transform Your Data Into Growth")
+       ======================================================================== -->
+  <section id="contact" class="py-24 border-t border-white/5 relative z-10 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Left Column: Details & Consultation Benefits -->
+        <div class="lg:col-span-5">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-teal-500/30 text-xs font-semibold text-teal-300 mb-4">
+            <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+            <span>SCHEDULE STRATEGY CALL</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-6">
+            Let's Transform Your <br>
+            <span class="gradient-text">Data Into Growth</span>
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
+            Schedule a free 30-minute discovery consultation with our principal data architects. We will audit your current data bottlenecks, propose scalable architecture blueprints, and quantify potential ROI.
+          </p>
+
+          <!-- Contact Quick Info -->
+          <div class="space-y-4 mb-8">
+            <div class="flex items-center gap-3 text-slate-300 text-sm">
+              <div class="w-9 h-9 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 shrink-0">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-500">Direct Inquiries</div>
+                <a href="mailto:kamblesunit7@gmail.com" class="hover:text-teal-400 font-medium">kamblesunit7@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 text-slate-300 text-sm">
+              <div class="w-9 h-9 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 shrink-0">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-500">Contact Number</div>
+                <a href="tel:+918669038009" class="hover:text-teal-400 font-medium">+91 8669038009</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 text-slate-300 text-sm">
+              <div class="w-9 h-9 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 shrink-0">
+                <i data-lucide="map-pin" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-500">Headquarters</div>
+                <span class="font-medium">Mumbai, India &bull; Global Remote Services</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Free Consultation Guarantee Box -->
+          <div class="p-4 rounded-2xl bg-teal-500/10 border border-teal-500/20 text-xs text-teal-300 leading-relaxed flex items-start gap-2.5">
+            <i data-lucide="shield-check" class="w-4 h-4 text-teal-400 shrink-0 mt-0.5"></i>
+            <span><strong>Zero-Risk Engagement:</strong> Includes preliminary architecture diagram, cloud license cost assessment, and NDA protection.</span>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Consultation Form -->
+        <div class="lg:col-span-7">
+          <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-white/10 relative">
+            
+            <form id="inlineContactForm" action="https://formsubmit.co/kamblesunit7@gmail.com" method="POST" data-netlify="true" name="contact-inquiry" class="space-y-4">
+              <input type="hidden" name="form-name" value="contact-inquiry">
+              <input type="hidden" name="_subject" value="New Website Inquiry - Data Anatech Labs">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="name" class="block text-xs font-semibold text-slate-300 mb-1">Your Full Name *</label>
+                  <input type="text" id="name" name="name" required placeholder="Jane Doe" class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 transition-all">
+                </div>
+
+                <div>
+                  <label for="company" class="block text-xs font-semibold text-slate-300 mb-1">Company / Organization *</label>
+                  <input type="text" id="company" name="company" required placeholder="Acme Enterprises" class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 transition-all">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="email" class="block text-xs font-semibold text-slate-300 mb-1">Business Email *</label>
+                  <input type="email" id="email" name="email" required placeholder="jane@acme.com" class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 transition-all">
+                </div>
+
+                <div>
+                  <label for="phone" class="block text-xs font-semibold text-slate-300 mb-1">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+91 00000 00000" class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 transition-all">
+                </div>
+              </div>
+
+              <div>
+                <label for="serviceReq" class="block text-xs font-semibold text-slate-300 mb-1">Service Required *</label>
+                <select id="serviceReq" name="service_required" required class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white text-sm focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 transition-all">
+                  <option value="" disabled selected>Select Primary Area of Interest</option>
+                  <option value="Data Analytics & Dashboard Development (Power BI / Tableau)">Data Analytics & Dashboard Development (Power BI / Tableau)</option>
+                  <option value="Data Engineering (Fabric / Databricks / Snowflake ETL)">Data Engineering (Fabric / Databricks / Snowflake ETL)</option>
+                  <option value="Legacy Database & Cloud Migration">Legacy Database & Cloud Migration</option>
+                  <option value="Business Process Automation (Power Automate / RPA)">Business Process Automation (Power Automate / RPA)</option>
+                  <option value="Artificial Intelligence & Predictive ML Solutions">Artificial Intelligence & Predictive ML Solutions</option>
+                  <option value="Business Problem Solving & Strategy Through Data">Business Problem Solving & Strategy Through Data</option>
+                  <option value="Comprehensive End-to-End Modernization">Comprehensive End-to-End Modernization</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="message" class="block text-xs font-semibold text-slate-300 mb-1">Project Details or Goals *</label>
+                <textarea id="message" name="message" rows="4" required placeholder="Tell us about your current data stack, timeline, and what business challenges you want to solve..." class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 transition-all resize-none"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-teal-400 to-sky-400 hover:from-teal-300 hover:to-sky-300 text-slate-950 font-bold text-xs uppercase tracking-wider shadow-lg shadow-teal-500/25 hover:shadow-teal-500/40 transition-all flex items-center justify-center gap-2">
+                <span>Schedule Free Consultation</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </form>
+
+            <!-- Success State -->
+            <div id="inlineContactSuccess" class="hidden text-center py-10">
+              <div class="w-16 h-16 rounded-full bg-teal-500/20 text-teal-400 mx-auto flex items-center justify-center mb-4 border border-teal-500/40">
+                <i data-lucide="check" class="w-8 h-8"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-2">Inquiry Successfully Submitted!</h3>
+              <p class="text-sm text-slate-300 max-w-md mx-auto mb-5">
+                Thank you for reaching out. Your request is queued for <strong>kamblesunit7@gmail.com</strong>. One of our lead data architects will respond within 2 hours.
+              </p>
+              <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-6">
+                <a id="inlineDirectMailtoLink" href="mailto:kamblesunit7@gmail.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-teal-400 hover:bg-teal-300 text-slate-950 font-bold text-xs uppercase tracking-wider transition-all">
+                  <i data-lucide="send" class="w-4 h-4"></i>
+                  <span>Send Direct Email Copy</span>
+                </a>
+                <button type="button" onclick="document.getElementById('inlineContactSuccess').classList.add('hidden'); document.getElementById('inlineContactForm').classList.remove('hidden');" class="text-xs text-slate-400 hover:text-white underline">
+                  Submit another inquiry
+                </button>
+              </div>
+              <span class="inline-block px-4 py-2 rounded-xl bg-slate-900 text-xs font-mono text-teal-400 border border-white/5">
+                Target Inbox: kamblesunit7@gmail.com &bull; Mumbai Office
+              </span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Footer
+       ======================================================================== -->
+  <footer class="border-t border-white/5 bg-slate-950 relative z-10 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="lg:col-span-2">
+          <a href="#hero" class="flex items-center gap-4 mb-5 group">
+            <div class="w-16 h-16 rounded-2xl bg-white p-2 border border-white/20 flex items-center justify-center overflow-hidden shadow-lg group-hover:scale-105 transition-transform">
+              <img src="logo.jpg" alt="Data Anatech Labs" class="w-full h-full object-contain rounded-xl">
+            </div>
+            <div>
+              <div class="font-extrabold text-xl text-white">DATA ANATECH <span class="text-teal-400">LABS</span></div>
+              <span class="text-[10px] uppercase tracking-widest text-slate-500 font-mono">Enterprise AI &bull; Mumbai</span>
+            </div>
+          </a>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-sm mb-6">
+            Data Anatech Labs is a data and AI consulting company that helps organizations transform raw data into business value through Analytics, Data Engineering, Automation, AI solutions, and Data-driven decision making.
+          </p>
+          <div class="flex items-center gap-3">
+            <a href="#" class="w-8 h-8 rounded-lg bg-slate-900 border border-white/10 text-slate-400 hover:text-teal-400 hover:border-teal-400/40 flex items-center justify-center transition-all" aria-label="LinkedIn">
+              <i data-lucide="linkedin" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-slate-900 border border-white/10 text-slate-400 hover:text-teal-400 hover:border-teal-400/40 flex items-center justify-center transition-all" aria-label="Twitter">
+              <i data-lucide="twitter" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-slate-900 border border-white/10 text-slate-400 hover:text-teal-400 hover:border-teal-400/40 flex items-center justify-center transition-all" aria-label="GitHub">
+              <i data-lucide="github" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-slate-900 border border-white/10 text-slate-400 hover:text-teal-400 hover:border-teal-400/40 flex items-center justify-center transition-all" aria-label="YouTube">
+              <i data-lucide="youtube" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Services Links -->
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-white mb-4">Core Services</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="#services" class="hover:text-teal-400 transition-colors">Data Analytics & BI</a></li>
+            <li><a href="#services" class="hover:text-teal-400 transition-colors">Power BI Consulting</a></li>
+            <li><a href="#services" class="hover:text-teal-400 transition-colors">Tableau Development</a></li>
+            <li><a href="#services" class="hover:text-teal-400 transition-colors">Data Engineering & ETL</a></li>
+            <li><a href="#services" class="hover:text-teal-400 transition-colors">Cloud Data Migration</a></li>
+            <li><a href="#services" class="hover:text-teal-400 transition-colors">Business Process Automation</a></li>
+            <li><a href="#services" class="hover:text-teal-400 transition-colors">Artificial Intelligence</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Technologies Links -->
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-white mb-4">Technologies</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="#technologies" class="hover:text-teal-400 transition-colors">Microsoft Fabric</a></li>
+            <li><a href="#technologies" class="hover:text-teal-400 transition-colors">Snowflake Data Lakehouse</a></li>
+            <li><a href="#technologies" class="hover:text-teal-400 transition-colors">Azure Databricks</a></li>
+            <li><a href="#technologies" class="hover:text-teal-400 transition-colors">PySpark & Python</a></li>
+            <li><a href="#technologies" class="hover:text-teal-400 transition-colors">Microsoft Power Automate</a></li>
+            <li><a href="#technologies" class="hover:text-teal-400 transition-colors">OpenAI & LangChain</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Quick Links & Contact -->
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-white mb-4">Company & Support</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="#about" class="hover:text-teal-400 transition-colors">About Us</a></li>
+            <li><a href="#case-studies" class="hover:text-teal-400 transition-colors">Case Studies</a></li>
+            <li><a href="#process" class="hover:text-teal-400 transition-colors">How We Work</a></li>
+            <li><a href="#insights" class="hover:text-teal-400 transition-colors">Data & AI Insights</a></li>
+            <li><a href="#contact" class="hover:text-teal-400 transition-colors">Schedule Consultation</a></li>
+            <li><span class="text-slate-500">Security & Compliance (SOC2)</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div>
+          &copy; 2026 Data Anatech Labs. All Rights Reserved.
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-slate-400">Privacy Policy</a>
+          <a href="#" class="hover:text-slate-400">Terms of Service</a>
+          <a href="#" class="hover:text-slate-400">Security Architecture</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       Extra Premium Feature: AI Chatbot Assistant ("Anatech AI Advisor")
+       ======================================================================== -->
+  <div class="chatbot-container">
+    <!-- Chat Window Container -->
+    <div id="chatbotWindow" class="chat-window hidden-chat glass-panel rounded-3xl border border-teal-500/30 shadow-2xl mb-4 overflow-hidden">
+      
+      <!-- Chat Header -->
+      <div class="p-4 bg-gradient-to-r from-slate-900 to-slate-950 border-b border-white/10 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-xl bg-white p-0.5 border border-white/30 flex items-center justify-center overflow-hidden">
+            <img src="logo.jpg" alt="Data Anatech Labs" class="w-full h-full object-contain rounded-lg">
+          </div>
+          <div>
+            <div class="text-xs font-bold text-white flex items-center gap-1.5">
+              <span>Anatech AI Advisor</span>
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            </div>
+            <div class="text-[10px] text-teal-400">Online &bull; Instant Data Architecture Advice</div>
+          </div>
+        </div>
+        <button id="chatbotCloseBtn" class="text-slate-400 hover:text-white p-1 rounded-lg">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <!-- Chat Messages Body -->
+      <div id="chatMessages" class="flex-1 p-4 overflow-y-auto space-y-3 bg-slate-950/40">
+        <!-- Bot Welcome -->
+        <div class="flex justify-start mb-3">
+          <div class="bg-slate-800/90 text-slate-200 border border-slate-700/60 px-4 py-2.5 rounded-2xl rounded-tl-sm max-w-[85%] text-xs shadow-md">
+            👋 Hello! I am the <strong>Data Anatech Labs AI Advisor</strong>. How can we help you unlock your data's potential? Select a quick inquiry below or ask anything!
+          </div>
+        </div>
+
+        <!-- Quick suggestion chips -->
+        <div class="flex flex-wrap gap-1.5 pt-1">
+          <button class="chat-suggestion-chip text-[11px] px-2.5 py-1 rounded-full bg-teal-500/10 hover:bg-teal-500/20 text-teal-300 border border-teal-500/30 transition-colors" data-prompt="Power BI vs Tableau recommendation">
+            📊 Power BI vs Tableau
+          </button>
+          <button class="chat-suggestion-chip text-[11px] px-2.5 py-1 rounded-full bg-sky-500/10 hover:bg-sky-500/20 text-sky-300 border border-sky-500/30 transition-colors" data-prompt="How do you handle cloud data migration?">
+            ☁️ Cloud Data Migration
+          </button>
+          <button class="chat-suggestion-chip text-[11px] px-2.5 py-1 rounded-full bg-purple-500/10 hover:bg-purple-500/20 text-purple-300 border border-purple-500/30 transition-colors" data-prompt="What ROI can I expect from report automation?">
+            ⚡ Automate Excel & Reporting
+          </button>
+          <button class="chat-suggestion-chip text-[11px] px-2.5 py-1 rounded-full bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 transition-colors" data-prompt="Book a strategy call with a data architect">
+            📅 Book Strategy Call
+          </button>
+        </div>
+      </div>
+
+      <!-- Chat Input Box -->
+      <div class="p-3 bg-slate-900 border-t border-white/10 flex items-center gap-2">
+        <input id="chatInput" type="text" placeholder="Ask about Power BI, Fabric, AI or ROI..." class="flex-1 bg-slate-950 text-white text-xs px-3.5 py-2.5 rounded-xl border border-white/10 focus:outline-none focus:border-teal-400">
+        <button id="chatSendBtn" class="p-2.5 rounded-xl bg-teal-400 hover:bg-teal-300 text-slate-950 transition-colors">
+          <i data-lucide="send" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Floating Toggle Button -->
+    <button id="chatbotToggleBtn" class="flex items-center gap-2.5 px-4 py-3 rounded-full bg-gradient-to-r from-teal-400 to-sky-400 text-slate-950 font-bold text-xs uppercase tracking-wider shadow-2xl shadow-teal-500/40 hover:scale-105 transition-all">
+      <i data-lucide="message-square" class="w-4 h-4"></i>
+      <span>AI Data Advisor</span>
+      <span class="w-2 h-2 rounded-full bg-slate-950 animate-ping"></span>
+    </button>
+  </div>
+
+  <!-- ========================================================================
+       Book-a-Consultation Interactive Calendar Modal
+       ======================================================================== -->
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 modal-overlay">
+    <div class="glass-panel w-full max-w-2xl rounded-3xl border border-white/15 overflow-hidden shadow-2xl">
+      
+      <!-- Modal Header -->
+      <div class="p-6 bg-slate-900/80 border-b border-white/10 flex items-center justify-between">
+        <div>
+          <h3 class="text-xl font-bold text-white flex items-center gap-2">
+            <i data-lucide="calendar" class="w-5 h-5 text-teal-400"></i>
+            <span>Schedule Your Free Consultation</span>
+          </h3>
+          <p class="text-xs text-slate-400 mt-0.5">30-Minute Architecture & ROI Strategy Call with Principal Engineer</p>
+        </div>
+        <button class="close-booking-modal-btn text-slate-400 hover:text-white p-2">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6">
+        <div id="bookingFormContainer">
+          <form id="bookingModalForm" action="https://formsubmit.co/kamblesunit7@gmail.com" method="POST" data-netlify="true" name="consultation-booking" class="space-y-4">
+            <input type="hidden" name="form-name" value="consultation-booking">
+            <input type="hidden" name="_subject" value="New Consultation Appointment Booking - Data Anatech Labs">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" id="selectedDateInput" name="preferred_date" value="Tue, Nov 4">
+            <input type="hidden" id="selectedTimeInput" name="preferred_time" value="02:00 PM EST">
+            
+            <!-- Calendar Date Picker Simulation -->
+            <div>
+              <span class="block text-xs font-semibold text-slate-300 mb-2">Select Date (Upcoming Available Sessions):</span>
+              <div class="grid grid-cols-5 gap-2">
+                <button type="button" class="calendar-day-btn p-2 rounded-xl border border-white/10 text-center hover:border-teal-400 text-xs">
+                  <div class="text-[10px] text-slate-400">Mon</div>
+                  <div class="font-bold text-white">Nov 3</div>
+                </button>
+                <button type="button" class="calendar-day-btn p-2 rounded-xl bg-teal-500 text-slate-950 font-bold text-center text-xs">
+                  <div class="text-[10px] text-slate-900">Tue</div>
+                  <div>Nov 4</div>
+                </button>
+                <button type="button" class="calendar-day-btn p-2 rounded-xl border border-white/10 text-center hover:border-teal-400 text-xs">
+                  <div class="text-[10px] text-slate-400">Wed</div>
+                  <div class="font-bold text-white">Nov 5</div>
+                </button>
+                <button type="button" class="calendar-day-btn p-2 rounded-xl border border-white/10 text-center hover:border-teal-400 text-xs">
+                  <div class="text-[10px] text-slate-400">Thu</div>
+                  <div class="font-bold text-white">Nov 6</div>
+                </button>
+                <button type="button" class="calendar-day-btn p-2 rounded-xl border border-white/10 text-center hover:border-teal-400 text-xs">
+                  <div class="text-[10px] text-slate-400">Fri</div>
+                  <div class="font-bold text-white">Nov 7</div>
+                </button>
+              </div>
+            </div>
+
+            <!-- Time Slots -->
+            <div>
+              <span class="block text-xs font-semibold text-slate-300 mb-2">Select Time Window (EST):</span>
+              <div class="grid grid-cols-3 gap-2">
+                <button type="button" class="calendar-slot-chip px-3 py-2 rounded-xl border border-white/10 text-xs text-white hover:border-teal-400 text-center">
+                  10:00 AM EST
+                </button>
+                <button type="button" class="calendar-slot-chip px-3 py-2 rounded-xl bg-teal-500 text-slate-950 border border-teal-400 font-semibold text-xs text-center">
+                  02:00 PM EST
+                </button>
+                <button type="button" class="calendar-slot-chip px-3 py-2 rounded-xl border border-white/10 text-xs text-white hover:border-teal-400 text-center">
+                  04:30 PM EST
+                </button>
+              </div>
+            </div>
+
+            <!-- Contact Inputs -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              <div>
+                <label class="block text-[11px] font-semibold text-slate-300 mb-1">Your Name *</label>
+                <input type="text" name="name" required placeholder="Alex Morgan" class="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-xs text-white focus:outline-none focus:border-teal-400">
+              </div>
+              <div>
+                <label class="block text-[11px] font-semibold text-slate-300 mb-1">Work Email *</label>
+                <input type="email" name="email" required placeholder="alex@company.com" class="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-xs text-white focus:outline-none focus:border-teal-400">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-[11px] font-semibold text-slate-300 mb-1">Focus Area</label>
+              <select name="focus_area" class="w-full px-3 py-2 rounded-lg bg-slate-900 border border-white/10 text-xs text-white focus:outline-none focus:border-teal-400">
+                <option value="Data Analytics & Power BI Dashboard">Data Analytics & Power BI Dashboard</option>
+                <option value="Data Engineering & Lakehouse (Fabric/Snowflake)">Data Engineering & Lakehouse (Fabric/Snowflake)</option>
+                <option value="Legacy Cloud Migration">Legacy Cloud Migration</option>
+                <option value="Business Process Automation (Power Automate)">Business Process Automation (Power Automate)</option>
+                <option value="Artificial Intelligence & ML">Artificial Intelligence & ML</option>
+              </select>
+            </div>
+
+            <div class="pt-2">
+              <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-teal-400 to-sky-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition-all">
+                Confirm Consultation Appointment
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Confirmation State -->
+        <div id="bookingConfirmationCard" class="hidden text-center py-8">
+          <div class="w-14 h-14 rounded-full bg-teal-500/20 text-teal-400 mx-auto flex items-center justify-center mb-4 border border-teal-500/40">
+            <i data-lucide="check-circle" class="w-8 h-8"></i>
+          </div>
+          <h4 class="text-xl font-bold text-white mb-2">Consultation Booking Sent!</h4>
+          <p class="text-xs text-slate-300 max-w-sm mx-auto mb-4">
+            We have recorded your booking request for <strong>kamblesunit7@gmail.com</strong>. A calendar invite confirmation will be coordinated shortly.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-2 mb-4">
+            <a id="modalDirectMailtoLink" href="mailto:kamblesunit7@gmail.com" class="inline-flex items-center gap-2 px-5 py-2 rounded-xl bg-teal-400 hover:bg-teal-300 text-slate-950 font-bold text-xs uppercase tracking-wider transition-all">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Send Direct Email Copy</span>
+            </a>
+            <button class="close-booking-modal-btn px-5 py-2 rounded-xl bg-slate-800 text-slate-300 text-xs font-semibold hover:bg-slate-700 transition-colors">
+              Close Window
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Case Study Detail Modal
+       ======================================================================== -->
+  <div id="caseStudyModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 modal-overlay">
+    <div class="glass-panel w-full max-w-2xl rounded-3xl border border-white/15 overflow-hidden shadow-2xl">
+      <div class="p-6 bg-slate-900/80 border-b border-white/10 flex items-center justify-between">
+        <div>
+          <span id="caseStudyModalClient" class="text-xs font-mono text-teal-400 uppercase tracking-wider">Client</span>
+          <h3 id="caseStudyModalTitle" class="text-lg font-bold text-white mt-0.5">Case Study Title</h3>
+        </div>
+        <button class="close-case-study-modal-btn text-slate-400 hover:text-white p-2">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="p-6 space-y-6">
+        <div>
+          <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Executive Summary & Challenge</h4>
+          <p id="caseStudyModalDesc" class="text-sm text-slate-300 leading-relaxed">
+            Detailed case study description goes here.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Key Quantified Outcomes</h4>
+          <div id="caseStudyModalMetrics" class="grid grid-cols-3 gap-3">
+            <!-- Dynamic Metrics -->
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Architecture & Technologies Deployed</h4>
+          <div id="caseStudyModalStack" class="flex flex-wrap gap-2">
+            <!-- Dynamic Tech Pills -->
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 bg-slate-900/60 border-t border-white/10 flex justify-end">
+        <button class="close-case-study-modal-btn px-5 py-2 rounded-xl bg-teal-500 text-slate-950 font-bold text-xs uppercase tracking-wider">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
