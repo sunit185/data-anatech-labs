@@ -1,6 +1,6 @@
-# Data Anatech Labs - Enterprise Website
+# Anatech Data Labs - Enterprise Website
 
-A modern, premium, enterprise-grade website built for **Data Anatech Labs** — a premier data and AI consulting company helping organizations transform raw data into measurable business value through Analytics, Data Engineering, Automation, and Artificial Intelligence solutions.
+A modern, premium, enterprise-grade website built for **Anatech Data Labs** — a premier data and AI consulting company helping organizations transform raw data into measurable business value through Analytics, Data Engineering, Automation, and Artificial Intelligence solutions.
 
 ---
 
@@ -27,7 +27,7 @@ A modern, premium, enterprise-grade website built for **Data Anatech Labs** — 
 ```
 data-anatech-labs/
 ├── assets/
-│   └── logo.jpg      # Official Data Anatech Labs logo
+│   └── logo.jpg      # Official Anatech Data Labs logo
 ├── index.html        # Complete, responsive enterprise single-page application
 ├── styles.css        # Glassmorphism utilities, CSS variables, glowing badges, keyframes
 ├── script.js         # Interactive modules: theme switcher, Chart.js, counters, chatbot, modals
@@ -80,4 +80,4 @@ This self-contained directory can be deployed directly to any static web hosting
 
 ---
 
-*© 2026 Data Anatech Labs. All Rights Reserved.*
+*© 2026 Anatech Data Labs. All Rights Reserved.*

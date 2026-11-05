@@ -1,5 +1,5 @@
 /**
- * Data Anatech Labs - Enterprise Interactive Script
+ * Anatech Data Labs - Enterprise Interactive Script
  * Handles Theme Toggling, Dynamic Charts, Animated Counters, 
  * Dashboard Visualizers, ROI Calculator, AI Chatbot, and Booking Modal.
  */
@@ -631,7 +631,7 @@ function initChatbot() {
       );
     } else {
       appendMessage(
-        `Thank you for asking! Data Anatech Labs helps organizations turn complex data into measurable revenue through <strong>Analytics, Data Engineering, Automation, and Custom AI</strong>. Let's discuss your specific goals during a free consultation.`,
+        `Thank you for asking! Anatech Data Labs helps organizations turn complex data into measurable revenue through <strong>Analytics, Data Engineering, Automation, and Custom AI</strong>. Let's discuss your specific goals during a free consultation.`,
         'bot',
         true
       );
@@ -717,13 +717,13 @@ function initBookingModal() {
 
   // Helper to construct mailto link
   function buildMailtoLink(subject, fields) {
-    let body = "Hello Data Anatech Labs Team,\n\nI have submitted an inquiry from your website:\n\n";
+    let body = "Hello Anatech Data Labs Team,\n\nI have submitted an inquiry from your website:\n\n";
     for (const [k, v] of Object.entries(fields)) {
       if (!k.startsWith('_') && k !== 'form-name' && k !== 'bot-field' && v) {
         body += `${k.replace(/_/g, ' ').toUpperCase()}: ${v}\n`;
       }
     }
-    body += "\n---\nSent via Data Anatech Labs Website";
+    body += "\n---\nSent via Anatech Data Labs Website";
     return `mailto:anatechdatalabs@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }
 
@@ -795,7 +795,7 @@ function initBookingModal() {
         submitBtn.innerHTML = '<span class="animate-spin inline-block mr-2">⏳</span> Routing to anatechdatalabs@gmail.com...';
       }
 
-      await sendEnquiryEmail(inlineForm, 'New Website Inquiry - Data Anatech Labs', 'inlineDirectMailtoLink', () => {
+      await sendEnquiryEmail(inlineForm, 'New Website Inquiry - Anatech Data Labs', 'inlineDirectMailtoLink', () => {
         inlineForm.classList.add('hidden');
         if (inlineSuccess) {
           inlineSuccess.classList.remove('hidden');
@@ -838,7 +838,7 @@ function initCaseStudyModal() {
     '1': {
       title: 'Enterprise Power BI Executive Reporting Suite',
       client: 'OmniRetail Global (Tier-1 Retailer)',
-      desc: 'OmniRetail suffered from fragmented multi-brand sales data, taking 14 days after month-end to generate executive reports. Data Anatech Labs built a centralized data warehouse in Microsoft Fabric and deployed interactive Power BI dashboards with real-time basket analysis and inventory forecasting.',
+      desc: 'OmniRetail suffered from fragmented multi-brand sales data, taking 14 days after month-end to generate executive reports. Anatech Data Labs built a centralized data warehouse in Microsoft Fabric and deployed interactive Power BI dashboards with real-time basket analysis and inventory forecasting.',
       metrics: [
         { label: 'Revenue Uplift', value: '+25%' },
         { label: 'Reporting Lead Time', value: '14 Days ➔ 2 Mins' },
@@ -860,7 +860,7 @@ function initCaseStudyModal() {
     '3': {
       title: 'AI Machine Learning Demand & Churn Forecasting',
       client: 'LogiTech Logistics (Supply Chain Enterprise)',
-      desc: 'Unpredictable customer churn and volatile demand caused excess warehouse overhead and lost revenue. Data Anatech Labs created custom gradient-boosted ML pipelines on Databricks with PySpark, predicting customer churn 60 days in advance and forecasting product demand with high accuracy.',
+      desc: 'Unpredictable customer churn and volatile demand caused excess warehouse overhead and lost revenue. Anatech Data Labs created custom gradient-boosted ML pipelines on Databricks with PySpark, predicting customer churn 60 days in advance and forecasting product demand with high accuracy.',
       metrics: [
         { label: 'Demand Prediction Accuracy', value: '+35%' },
         { label: 'Churn Prevention ROI', value: '$2.4M Saved' },
