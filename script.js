@@ -109,18 +109,27 @@ function initCounters() {
 }
 
 /* ==========================================================================
-   3. Chart.js Implementations (Hero, BI Preview, Forecast)
+   3. Chart.js Implementations & Multi-Dashboard Showcase
    ========================================================================== */
-let heroChartInstance = null;
+let salesChartInstance = null;
+let ecommerceChartInstance = null;
+let financeChartInstance = null;
+let pharmacyChartInstance = null;
 let biDashboardChartInstance = null;
 
 function initCharts() {
-  initHeroChart();
+  initSalesChart();
+  initEcommerceChart();
+  initFinanceChart();
+  initPharmacyChart();
   initBiDashboardChart();
+  initDashboardCarousel();
+  initPharmacyChatbot();
 }
 
-function initHeroChart() {
-  const canvas = document.getElementById('heroChartCanvas');
+/* 3.1 Power BI - Sales & Marketing Chart */
+function initSalesChart() {
+  const canvas = document.getElementById('salesChartCanvas');
   if (!canvas || !window.Chart) return;
 
   const isLight = document.body.classList.contains('light-theme');
@@ -128,44 +137,111 @@ function initHeroChart() {
   const gridColor = isLight ? 'rgba(0,0,0,0.06)' : 'rgba(255,255,255,0.05)';
 
   const ctx = canvas.getContext('2d');
-  
-  // Teal gradient
-  const tealGradient = ctx.createLinearGradient(0, 0, 0, 260);
-  tealGradient.addColorStop(0, 'rgba(0, 229, 201, 0.45)');
+  const amberGradient = ctx.createLinearGradient(0, 0, 0, 240);
+  amberGradient.addColorStop(0, 'rgba(245, 158, 11, 0.45)');
+  amberGradient.addColorStop(1, 'rgba(245, 158, 11, 0.0)');
+
+  const tealGradient = ctx.createLinearGradient(0, 0, 0, 240);
+  tealGradient.addColorStop(0, 'rgba(0, 229, 201, 0.35)');
   tealGradient.addColorStop(1, 'rgba(0, 229, 201, 0.0)');
 
-  // Purple gradient
-  const purpleGradient = ctx.createLinearGradient(0, 0, 0, 260);
-  purpleGradient.addColorStop(0, 'rgba(168, 85, 247, 0.35)');
-  purpleGradient.addColorStop(1, 'rgba(168, 85, 247, 0.0)');
-
-  heroChartInstance = new Chart(ctx, {
+  salesChartInstance = new Chart(ctx, {
     type: 'line',
     data: {
       labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
       datasets: [
         {
-          label: 'Data ROI Growth ($M)',
-          data: [4.2, 5.1, 6.4, 7.8, 9.2, 10.9, 12.1, 13.5, 14.8, 16.4],
-          borderColor: '#00e5c9',
+          label: 'Total Pipeline ($M)',
+          data: [12.4, 15.8, 18.2, 22.5, 25.8, 29.4, 32.1, 35.6, 38.6, 42.0],
+          borderColor: '#f59e0b',
           borderWidth: 3,
-          backgroundColor: tealGradient,
+          backgroundColor: amberGradient,
           fill: true,
-          tension: 0.4,
-          pointBackgroundColor: '#00e5c9',
+          tension: 0.38,
+          pointBackgroundColor: '#f59e0b',
           pointRadius: 4,
-          pointHoverRadius: 7
+          pointHoverRadius: 6
         },
         {
-          label: 'Data Pipeline Efficiency (%)',
-          data: [65, 71, 78, 84, 88, 92, 95, 97, 98.4, 99.2],
-          borderColor: '#a855f7',
+          label: 'Marketing Spend ($M)',
+          data: [3.2, 3.8, 4.1, 4.6, 5.0, 5.4, 5.8, 6.2, 6.5, 7.0],
+          borderColor: '#00e5c9',
           borderWidth: 2,
-          backgroundColor: purpleGradient,
+          backgroundColor: tealGradient,
           borderDash: [5, 5],
           fill: true,
-          tension: 0.4,
-          pointBackgroundColor: '#a855f7',
+          tension: 0.38,
+          pointBackgroundColor: '#00e5c9',
+          pointRadius: 3
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: true,
+          position: 'top',
+          labels: { color: textColor, font: { family: "'Plus Jakarta Sans', sans-serif", size: 11 }, boxWidth: 12 }
+        },
+        tooltip: {
+          backgroundColor: isLight ? '#ffffff' : '#0f172a',
+          titleColor: isLight ? '#0f172a' : '#f8fafc',
+          bodyColor: isLight ? '#334155' : '#cbd5e1',
+          borderColor: isLight ? '#e2e8f0' : 'rgba(255,255,255,0.1)',
+          borderWidth: 1,
+          padding: 10,
+          callbacks: { label: (c) => `${c.dataset.label}: $${c.raw}M` }
+        }
+      },
+      scales: {
+        x: { grid: { color: gridColor }, ticks: { color: textColor } },
+        y: { grid: { color: gridColor }, ticks: { color: textColor, callback: (v) => `$${v}M` } }
+      }
+    }
+  });
+}
+
+/* 3.2 Tableau - E-Commerce Chart */
+function initEcommerceChart() {
+  const canvas = document.getElementById('ecommerceChartCanvas');
+  if (!canvas || !window.Chart) return;
+
+  const isLight = document.body.classList.contains('light-theme');
+  const textColor = isLight ? '#475569' : '#94a3b8';
+  const gridColor = isLight ? 'rgba(0,0,0,0.06)' : 'rgba(255,255,255,0.05)';
+
+  const ctx = canvas.getContext('2d');
+  const skyGradient = ctx.createLinearGradient(0, 0, 0, 240);
+  skyGradient.addColorStop(0, 'rgba(56, 189, 248, 0.45)');
+  skyGradient.addColorStop(1, 'rgba(56, 189, 248, 0.0)');
+
+  ecommerceChartInstance = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+      datasets: [
+        {
+          label: 'Gross Merch. Value ($M)',
+          data: [24.5, 28.2, 31.8, 36.4, 40.2, 44.8, 48.6, 51.2, 54.2, 58.0],
+          borderColor: '#38bdf8',
+          borderWidth: 3,
+          backgroundColor: skyGradient,
+          fill: true,
+          tension: 0.38,
+          pointBackgroundColor: '#38bdf8',
+          pointRadius: 4
+        },
+        {
+          label: 'Cart Abandonment Recovered (%)',
+          data: [22, 26, 31, 35, 41, 46, 50, 54, 58.4, 62],
+          borderColor: '#c084fc',
+          borderWidth: 2,
+          borderDash: [4, 4],
+          fill: false,
+          tension: 0.38,
+          pointBackgroundColor: '#c084fc',
           pointRadius: 3,
           yAxisID: 'y1'
         }
@@ -174,19 +250,11 @@ function initHeroChart() {
     options: {
       responsive: true,
       maintainAspectRatio: false,
-      interaction: {
-        mode: 'index',
-        intersect: false
-      },
       plugins: {
         legend: {
           display: true,
           position: 'top',
-          labels: {
-            color: textColor,
-            font: { family: "'Plus Jakarta Sans', sans-serif", size: 12 },
-            boxWidth: 12
-          }
+          labels: { color: textColor, font: { family: "'Plus Jakarta Sans', sans-serif", size: 11 }, boxWidth: 12 }
         },
         tooltip: {
           backgroundColor: isLight ? '#ffffff' : '#0f172a',
@@ -194,59 +262,27 @@ function initHeroChart() {
           bodyColor: isLight ? '#334155' : '#cbd5e1',
           borderColor: isLight ? '#e2e8f0' : 'rgba(255,255,255,0.1)',
           borderWidth: 1,
-          padding: 12,
-          boxPadding: 6,
-          usePointStyle: true
+          padding: 10
         }
       },
       scales: {
-        x: {
-          grid: { color: gridColor },
-          ticks: { color: textColor, font: { family: "'Plus Jakarta Sans', sans-serif" } }
-        },
-        y: {
-          grid: { color: gridColor },
-          ticks: { color: textColor, callback: (v) => `$${v}M` }
-        },
+        x: { grid: { color: gridColor }, ticks: { color: textColor } },
+        y: { grid: { color: gridColor }, ticks: { color: textColor, callback: (v) => `$${v}M` } },
         y1: {
           position: 'right',
           grid: { display: false },
           ticks: { color: textColor, callback: (v) => `${v}%` },
-          min: 50,
+          min: 0,
           max: 100
         }
       }
     }
   });
-
-  // Timeframe buttons toggle
-  const timeBtns = document.querySelectorAll('.hero-timeframe-btn');
-  timeBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      timeBtns.forEach(b => b.classList.remove('bg-teal-500/20', 'text-teal-400', 'border-teal-500/40'));
-      e.target.classList.add('bg-teal-500/20', 'text-teal-400', 'border-teal-500/40');
-      
-      const frame = e.target.getAttribute('data-frame');
-      if (frame === '1M') {
-        heroChartInstance.data.labels = ['Week 1', 'Week 2', 'Week 3', 'Week 4'];
-        heroChartInstance.data.datasets[0].data = [14.2, 14.8, 15.6, 16.4];
-        heroChartInstance.data.datasets[1].data = [96, 97.2, 98.1, 99.2];
-      } else if (frame === '3M') {
-        heroChartInstance.data.labels = ['Month 1', 'Month 2', 'Month 3'];
-        heroChartInstance.data.datasets[0].data = [12.1, 14.8, 16.4];
-        heroChartInstance.data.datasets[1].data = [94.5, 97.8, 99.2];
-      } else {
-        heroChartInstance.data.labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'];
-        heroChartInstance.data.datasets[0].data = [4.2, 5.1, 6.4, 7.8, 9.2, 10.9, 12.1, 13.5, 14.8, 16.4];
-        heroChartInstance.data.datasets[1].data = [65, 71, 78, 84, 88, 92, 95, 97, 98.4, 99.2];
-      }
-      heroChartInstance.update();
-    });
-  });
 }
 
-function initBiDashboardChart() {
-  const canvas = document.getElementById('biDashboardCanvas');
+/* 3.3 Qlik Sense - Corporate Finance Chart */
+function initFinanceChart() {
+  const canvas = document.getElementById('financeChartCanvas');
   if (!canvas || !window.Chart) return;
 
   const isLight = document.body.classList.contains('light-theme');
@@ -255,21 +291,27 @@ function initBiDashboardChart() {
 
   const ctx = canvas.getContext('2d');
 
-  biDashboardChartInstance = new Chart(ctx, {
+  financeChartInstance = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['North America', 'Europe', 'Asia Pacific', 'Latin America', 'Middle East'],
+      labels: ['Q1 FY26', 'Q2 FY26', 'Q3 FY26', 'Q4 FY26 (Est)'],
       datasets: [
         {
-          label: 'Actual Revenue ($M)',
-          data: [28.4, 19.8, 22.3, 11.2, 8.9],
-          backgroundColor: '#00e5c9',
+          label: 'Gross Revenue ($M)',
+          data: [38.4, 42.6, 47.8, 52.5],
+          backgroundColor: '#10b981',
           borderRadius: 6
         },
         {
-          label: 'Target KPI ($M)',
-          data: [25.0, 18.0, 20.0, 10.0, 8.0],
-          backgroundColor: 'rgba(56, 189, 248, 0.45)',
+          label: 'Operating Expenses ($M)',
+          data: [24.2, 26.1, 28.9, 31.2],
+          backgroundColor: isLight ? '#94a3b8' : '#334155',
+          borderRadius: 6
+        },
+        {
+          label: 'Operating EBITDA ($M)',
+          data: [14.2, 16.5, 18.9, 21.3],
+          backgroundColor: '#00e5c9',
           borderRadius: 6
         }
       ]
@@ -279,20 +321,392 @@ function initBiDashboardChart() {
       maintainAspectRatio: false,
       plugins: {
         legend: {
-          labels: { color: textColor, font: { family: "'Plus Jakarta Sans', sans-serif" } }
+          display: true,
+          position: 'top',
+          labels: { color: textColor, font: { family: "'Plus Jakarta Sans', sans-serif", size: 11 }, boxWidth: 12 }
+        },
+        tooltip: {
+          backgroundColor: isLight ? '#ffffff' : '#0f172a',
+          titleColor: isLight ? '#0f172a' : '#f8fafc',
+          bodyColor: isLight ? '#334155' : '#cbd5e1',
+          borderColor: isLight ? '#e2e8f0' : 'rgba(255,255,255,0.1)',
+          borderWidth: 1,
+          padding: 10,
+          callbacks: { label: (c) => `${c.dataset.label}: $${c.raw}M` }
         }
       },
       scales: {
-        x: {
-          grid: { color: gridColor },
-          ticks: { color: textColor }
+        x: { grid: { color: gridColor }, ticks: { color: textColor } },
+        y: { grid: { color: gridColor }, ticks: { color: textColor, callback: (v) => `$${v}M` } }
+      }
+    }
+  });
+}
+
+/* 3.4 Pharmacy - Clinical Operations Chart */
+function initPharmacyChart() {
+  const canvas = document.getElementById('pharmacyChartCanvas');
+  if (!canvas || !window.Chart) return;
+
+  const isLight = document.body.classList.contains('light-theme');
+  const textColor = isLight ? '#475569' : '#94a3b8';
+  const gridColor = isLight ? 'rgba(0,0,0,0.06)' : 'rgba(255,255,255,0.05)';
+
+  const ctx = canvas.getContext('2d');
+  const tealGrad = ctx.createLinearGradient(0, 0, 0, 240);
+  tealGrad.addColorStop(0, 'rgba(0, 229, 201, 0.45)');
+  tealGrad.addColorStop(1, 'rgba(0, 229, 201, 0.0)');
+
+  pharmacyChartInstance = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+      datasets: [
+        {
+          label: 'Prescriptions Fulfilled (k/mo)',
+          data: [108, 114, 122, 128, 134, 138, 142, 145, 148.2, 152],
+          borderColor: '#00e5c9',
+          borderWidth: 3,
+          backgroundColor: tealGrad,
+          fill: true,
+          tension: 0.38,
+          pointBackgroundColor: '#00e5c9',
+          pointRadius: 4
         },
-        y: {
-          grid: { color: gridColor },
-          ticks: { color: textColor, callback: (v) => `$${v}M` }
+        {
+          label: 'Stockout Prevention Index (%)',
+          data: [99.2, 99.4, 99.6, 99.7, 99.8, 99.9, 100, 100, 100, 100],
+          borderColor: '#f43f5e',
+          borderWidth: 2,
+          borderDash: [4, 4],
+          fill: false,
+          tension: 0.2,
+          pointBackgroundColor: '#f43f5e',
+          pointRadius: 3,
+          yAxisID: 'y1'
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: true,
+          position: 'top',
+          labels: { color: textColor, font: { family: "'Plus Jakarta Sans', sans-serif", size: 11 }, boxWidth: 12 }
+        },
+        tooltip: {
+          backgroundColor: isLight ? '#ffffff' : '#0f172a',
+          titleColor: isLight ? '#0f172a' : '#f8fafc',
+          bodyColor: isLight ? '#334155' : '#cbd5e1',
+          borderColor: isLight ? '#e2e8f0' : 'rgba(255,255,255,0.1)',
+          borderWidth: 1,
+          padding: 10
+        }
+      },
+      scales: {
+        x: { grid: { color: gridColor }, ticks: { color: textColor } },
+        y: { grid: { color: gridColor }, ticks: { color: textColor, callback: (v) => `${v}k` } },
+        y1: {
+          position: 'right',
+          grid: { display: false },
+          ticks: { color: textColor, callback: (v) => `${v}%` },
+          min: 95,
+          max: 100
         }
       }
     }
+  });
+}
+
+/* 3.5 Dashboard Carousel Slider Controller */
+function initDashboardCarousel() {
+  const track = document.getElementById('dashboardCarouselTrack');
+  const slides = document.querySelectorAll('.dashboard-slide');
+  const tabBtns = document.querySelectorAll('.dash-tab-btn');
+  const indicatorDots = document.querySelectorAll('.carousel-indicator-dot');
+  const prevBtn = document.getElementById('carouselPrevBtn');
+  const nextBtn = document.getElementById('carouselNextBtn');
+  const activeLabel = document.getElementById('carouselActiveIndicator');
+  const container = document.querySelector('.dashboard-carousel-container');
+
+  if (!track || slides.length === 0) return;
+
+  let currentSlide = 0;
+  let autoPlayTimer = null;
+  const totalSlides = slides.length;
+
+  const slideTitles = [
+    'Dashboard 1 of 4: Power BI • Sales & Marketing',
+    'Dashboard 2 of 4: Tableau • E-Commerce & Retail',
+    'Dashboard 3 of 4: Qlik Sense • Corporate Finance',
+    'Dashboard 4 of 4: Pharmacy Operations & AI Copilot'
+  ];
+
+  const activeTabClasses = [
+    ['border-amber-500/40', 'bg-amber-500/10', 'text-amber-300'],
+    ['border-sky-500/40', 'bg-sky-500/10', 'text-sky-300'],
+    ['border-emerald-500/40', 'bg-emerald-500/10', 'text-emerald-300'],
+    ['border-teal-500/40', 'bg-teal-500/10', 'text-teal-300']
+  ];
+
+  function setSlide(index) {
+    currentSlide = (index + totalSlides) % totalSlides;
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+    // Update slides visibility
+    slides.forEach((slide, i) => {
+      if (i === currentSlide) {
+        slide.classList.add('active-slide');
+      } else {
+        slide.classList.remove('active-slide');
+      }
+    });
+
+    // Update tabs
+    tabBtns.forEach((btn, i) => {
+      btn.className = 'dash-tab-btn px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-2 transition-all cursor-pointer border ';
+      if (i === currentSlide) {
+        btn.classList.add('active', ...activeTabClasses[i]);
+      } else {
+        btn.classList.add('border-transparent', 'text-slate-400', 'hover:text-white', 'hover:bg-slate-800/50');
+      }
+    });
+
+    // Update dots
+    indicatorDots.forEach((dot, i) => {
+      if (i === currentSlide) {
+        dot.className = 'carousel-indicator-dot active w-8 h-2 rounded-full bg-teal-400 cursor-pointer';
+      } else {
+        dot.className = 'carousel-indicator-dot w-2 h-2 rounded-full bg-slate-700 hover:bg-slate-500 cursor-pointer';
+      }
+    });
+
+    if (activeLabel) {
+      activeLabel.textContent = slideTitles[currentSlide];
+    }
+
+    // Refresh charts on slide change
+    setTimeout(() => {
+      [salesChartInstance, ecommerceChartInstance, financeChartInstance, pharmacyChartInstance].forEach(chart => {
+        if (chart) chart.resize();
+      });
+      if (window.lucide) window.lucide.createIcons();
+    }, 150);
+  }
+
+  // Prev / Next button listeners
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      setSlide(currentSlide - 1);
+      resetAutoPlay();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      setSlide(currentSlide + 1);
+      resetAutoPlay();
+    });
+  }
+
+  // Tab click listeners
+  tabBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const idx = parseInt(btn.getAttribute('data-slide-index'), 10);
+      setSlide(idx);
+      resetAutoPlay();
+    });
+  });
+
+  // Indicator dot click listeners
+  indicatorDots.forEach((dot) => {
+    dot.addEventListener('click', () => {
+      const idx = parseInt(dot.getAttribute('data-slide-index'), 10);
+      setSlide(idx);
+      resetAutoPlay();
+    });
+  });
+
+  // Touch Swipe for Mobile
+  let startX = 0;
+  let endX = 0;
+  track.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  }, { passive: true });
+
+  track.addEventListener('touchend', (e) => {
+    endX = e.changedTouches[0].clientX;
+    const diff = startX - endX;
+    if (Math.abs(diff) > 40) {
+      if (diff > 0) {
+        setSlide(currentSlide + 1);
+      } else {
+        setSlide(currentSlide - 1);
+      }
+      resetAutoPlay();
+    }
+  }, { passive: true });
+
+  // Autoplay function (every 8 seconds, pauses on hover)
+  function startAutoPlay() {
+    autoPlayTimer = setInterval(() => {
+      setSlide(currentSlide + 1);
+    }, 8000);
+  }
+
+  function stopAutoPlay() {
+    if (autoPlayTimer) clearInterval(autoPlayTimer);
+  }
+
+  function resetAutoPlay() {
+    stopAutoPlay();
+    startAutoPlay();
+  }
+
+  if (container) {
+    container.addEventListener('mouseenter', stopAutoPlay);
+    container.addEventListener('mouseleave', startAutoPlay);
+  }
+
+  startAutoPlay();
+}
+
+function escapeHtml(str) {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+/* 3.6 Embedded Pharmacy AI Chatbot */
+function initPharmacyChatbot() {
+  const form = document.getElementById('pharmacyChatForm');
+  const input = document.getElementById('pharmacyChatInput');
+  const messagesContainer = document.getElementById('pharmacyChatMessages');
+  const promptChips = document.querySelectorAll('.pharmacy-prompt-chip');
+
+  if (!form || !messagesContainer) return;
+
+  function appendUserMessage(text) {
+    const msgDiv = document.createElement('div');
+    msgDiv.className = 'flex items-start justify-end gap-2 text-right';
+    msgDiv.innerHTML = `
+      <div class="p-2.5 rounded-xl rounded-tr-sm bg-teal-500/20 border border-teal-500/30 text-teal-200 text-[11px] leading-relaxed max-w-[85%]">
+        ${escapeHtml(text)}
+      </div>
+    `;
+    messagesContainer.appendChild(msgDiv);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  }
+
+  function appendBotMessage(html) {
+    const msgDiv = document.createElement('div');
+    msgDiv.className = 'flex items-start gap-2';
+    msgDiv.innerHTML = `
+      <div class="w-5 h-5 rounded-full bg-teal-500/20 text-teal-400 flex items-center justify-center shrink-0 mt-0.5">
+        <i data-lucide="bot" class="w-3 h-3"></i>
+      </div>
+      <div class="p-2.5 rounded-xl rounded-tl-sm bg-slate-900 border border-white/10 text-slate-200 text-[11px] leading-relaxed max-w-[90%] shadow-md">
+        ${html}
+      </div>
+    `;
+    messagesContainer.appendChild(msgDiv);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    if (window.lucide) window.lucide.createIcons();
+  }
+
+  function getPharmacyResponse(query) {
+    const q = query.toLowerCase();
+
+    if (q.includes('amoxicillin') || q.includes('ozempic') || q.includes('stock')) {
+      return `
+        <div class="font-bold text-teal-400 mb-1 flex items-center gap-1.5">
+          <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Live Pharmacy Inventory Query:
+        </div>
+        <div class="space-y-1.5 text-slate-300">
+          <div>&bull; <strong>Amoxicillin 500mg:</strong> <span class="text-emerald-400 font-mono">4,250 units</span> (Optimal, 28 days reserve). Safety buffer SLA: Met.</div>
+          <div>&bull; <strong>Ozempic 2mg/3ml:</strong> <span class="text-amber-400 font-mono">180 pens</span> (Reorder threshold triggered). Next McKesson delivery scheduled: Nov 12.</div>
+          <div class="text-[10px] text-slate-400 mt-1">Status: Zero out-of-stock incidents across all 24 regional pharmacies.</div>
+        </div>
+      `;
+    }
+
+    if (q.includes('warfarin') || q.includes('ibuprofen') || q.includes('interaction')) {
+      return `
+        <div class="font-bold text-rose-400 mb-1 flex items-center gap-1.5">
+          <i data-lucide="alert-triangle" class="w-3.5 h-3.5"></i> High Severity Clinical Alert:
+        </div>
+        <div class="space-y-1.5 text-slate-300">
+          <div><strong>Warfarin (Anticoagulant) + Ibuprofen (NSAID):</strong></div>
+          <div class="text-rose-200">Contraindicated. Co-administration significantly increases gastrointestinal hemorrhage risk and INR volatility.</div>
+          <div class="p-1.5 rounded bg-rose-500/10 border border-rose-500/20 text-[10px] text-rose-300 font-semibold">
+            Clinical Recommendation: Substitute with Acetaminophen (Tylenol) for mild-to-moderate analgesia.
+          </div>
+        </div>
+      `;
+    }
+
+    if (q.includes('forecast') || q.includes('winter') || q.includes('demand')) {
+      return `
+        <div class="font-bold text-sky-400 mb-1 flex items-center gap-1.5">
+          <i data-lucide="trending-up" class="w-3.5 h-3.5"></i> ML Refill Demand Forecast (Q4/Winter):
+        </div>
+        <div class="space-y-1.5 text-slate-300">
+          <div>&bull; Predicted <strong>+38.5% demand surge</strong> in pediatric antibiotics (Amox/Clav & Azithromycin).</div>
+          <div>&bull; Automated procurement order generated for <strong>8,500 reserve units</strong> to preserve 0% stockout SLA.</div>
+          <div class="text-[10px] text-teal-400">Model Confidence: 99.4% based on 5-year regional historical epidemiological data.</div>
+        </div>
+      `;
+    }
+
+    return `
+      <div class="text-slate-300">
+        <strong>RxClinical AI:</strong> Analyzed formulary query for <em>"${escapeHtml(query)}"</em>.<br>
+        Verified across FDA NDC directory and live inventory lakehouse. All 24 outlets report healthy formulary compliance (97.6%) and zero active safety recalls.
+      </div>
+    `;
+  }
+
+  function handleQuery(queryText) {
+    if (!queryText.trim()) return;
+    appendUserMessage(queryText);
+    if (input) input.value = '';
+
+    // Show typing state
+    const typingDiv = document.createElement('div');
+    typingDiv.id = 'pharmacyTypingIndicator';
+    typingDiv.className = 'flex items-center gap-2 text-[10px] text-teal-400 font-mono py-1';
+    typingDiv.innerHTML = '<span class="animate-spin inline-block">⚙️</span> RxClinical AI querying pharmacy lakehouse...';
+    messagesContainer.appendChild(typingDiv);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+    setTimeout(() => {
+      const indicator = document.getElementById('pharmacyTypingIndicator');
+      if (indicator) indicator.remove();
+      const botResponse = getPharmacyResponse(queryText);
+      appendBotMessage(botResponse);
+    }, 600);
+  }
+
+  // Handle form submission
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (input && input.value) {
+      handleQuery(input.value);
+    }
+  });
+
+  // Handle prompt chips
+  promptChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const q = chip.getAttribute('data-question');
+      if (q) handleQuery(q);
+    });
   });
 }
 
@@ -300,7 +714,7 @@ function updateChartThemes(isLight) {
   const textColor = isLight ? '#475569' : '#94a3b8';
   const gridColor = isLight ? 'rgba(0,0,0,0.06)' : 'rgba(255,255,255,0.05)';
 
-  [heroChartInstance, biDashboardChartInstance].forEach(chart => {
+  [salesChartInstance, ecommerceChartInstance, financeChartInstance, pharmacyChartInstance, biDashboardChartInstance].forEach(chart => {
     if (!chart) return;
     if (chart.options.scales.x) {
       chart.options.scales.x.grid.color = gridColor;
@@ -309,6 +723,9 @@ function updateChartThemes(isLight) {
     if (chart.options.scales.y) {
       chart.options.scales.y.grid.color = gridColor;
       chart.options.scales.y.ticks.color = textColor;
+    }
+    if (chart.options.scales.y1) {
+      chart.options.scales.y1.ticks.color = textColor;
     }
     if (chart.options.plugins.legend) {
       chart.options.plugins.legend.labels.color = textColor;

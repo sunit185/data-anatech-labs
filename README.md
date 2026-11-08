@@ -9,6 +9,11 @@ A modern, premium, enterprise-grade website built for **Anatech Data Labs** — 
 - **Design System**: Premium SaaS aesthetic featuring Dark Blue (`#060913`), Vibrant Teal (`#00e5c9`), Sky Blue (`#38bdf8`), and AI Purple (`#a855f7`) with smooth glassmorphism effects and subtle glows.
 - **Official Brand Logo**: Custom company emblem integrated across navigation header, footer, favicon, and AI assistant.
 - **Dark & Light Mode**: Real-time theme toggle persisted via `localStorage` with adaptive contrast and Chart.js theme switching.
+- **Interactive Multi-Dashboard Showcase Carousel**:
+  1. **Sales & Marketing Dashboard (Power BI)**: Pipeline growth, CAC optimization, and multi-touch lead conversion attribution.
+  2. **E-Commerce Omnichannel Dashboard (Tableau)**: GMV velocity, cart abandonment mitigation, and category merchandising breakdown.
+  3. **Corporate Finance Cockpit (Qlik Sense)**: In-memory EBITDA forecasting, free cash flow tracking, and working capital governance.
+  4. **Pharmacy Operations & AI Copilot**: Prescription fulfillment metrics, drug stockout prevention, and an interactive embedded **RxClinical AI Chatbot**.
 - **Animated KPI Counters**: Smooth cubic-eased intersection counters for `50+ Projects Delivered`, `20+ Happy Clients`, `99% Satisfaction`, and `10M+ Records Processed`.
 - **Anatech AI Advisor Chatbot**: Floating conversational assistant providing instant recommendations on Power BI vs Tableau, Cloud Data Migration, Automation ROI, and booking consultation calls.
 - **Interactive Booking & Contact System**:

@@ -281,3 +281,72 @@ input[type=range] {
   background-color: rgba(3, 7, 18, 0.75);
   backdrop-filter: blur(8px);
 }
+
+/* ==========================================================================
+   Dashboard Carousel Slider & Embedded Pharmacy Chatbot
+   ========================================================================== */
+.dashboard-carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-carousel-track {
+  display: flex;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.dashboard-slide {
+  min-width: 100%;
+  flex-shrink: 0;
+  opacity: 0.2;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.dashboard-slide.active-slide {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dash-tab-btn {
+  transition: all 0.25s ease;
+}
+
+.dash-tab-btn.active {
+  background: rgba(0, 229, 201, 0.12);
+  border-color: rgba(0, 229, 201, 0.45);
+  color: #00e5c9;
+  box-shadow: 0 4px 20px -4px rgba(0, 229, 201, 0.25);
+}
+
+.light-theme .dash-tab-btn.active {
+  background: rgba(13, 148, 136, 0.12);
+  border-color: rgba(13, 148, 136, 0.5);
+  color: #0d9488;
+}
+
+.carousel-indicator-dot {
+  transition: all 0.3s ease;
+}
+
+.carousel-indicator-dot.active {
+  width: 2rem;
+  background-color: #00e5c9;
+}
+
+.light-theme .carousel-indicator-dot.active {
+  background-color: #0d9488;
+}
+
+/* Embedded Pharmacy Chatbot */
+.pharmacy-chat-box {
+  background: rgba(10, 15, 30, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+}
+
+.light-theme .pharmacy-chat-box {
+  background: rgba(248, 250, 252, 0.95);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+}

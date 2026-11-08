@@ -238,86 +238,765 @@
         </div>
       </div>
 
-      <!-- Hero Visual: 3D AI Glassmorphism Live Dashboard Preview -->
-      <div class="relative max-w-5xl mx-auto mt-6">
+      <!-- Hero Visual: Multi-Dashboard Carousel Showcase (Power BI, Tableau, Qlik, Pharmacy AI) -->
+      <div class="relative max-w-6xl mx-auto mt-8">
         <!-- Glow backing -->
         <div class="absolute -inset-1 bg-gradient-to-r from-teal-500 via-sky-500 to-purple-600 rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition duration-1000"></div>
 
-        <div class="relative glass-panel rounded-2xl overflow-hidden border border-white/15 p-4 sm:p-6 shadow-2xl">
+        <div class="relative glass-panel rounded-3xl overflow-hidden border border-white/15 p-4 sm:p-7 shadow-2xl">
           
-          <!-- Top Window Control Header -->
-          <div class="flex flex-wrap items-center justify-between pb-4 mb-5 border-b border-white/10 gap-3">
+          <!-- Carousel Navigation Tabs & Domain Selector -->
+          <div class="flex flex-col sm:flex-row items-center justify-between pb-4 mb-5 border-b border-white/10 gap-4">
+            
+            <!-- Tab Buttons -->
+            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+              <button class="dash-tab-btn active px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-2 border border-amber-500/40 bg-amber-500/10 text-amber-300 transition-all cursor-pointer" data-slide-index="0">
+                <i data-lucide="bar-chart-2" class="w-4 h-4 text-amber-400"></i>
+                <span class="font-bold">Power BI</span>
+                <span class="text-slate-500 hidden sm:inline">&bull;</span>
+                <span class="hidden sm:inline">Sales & Marketing</span>
+              </button>
+
+              <button class="dash-tab-btn px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-2 border border-transparent text-slate-400 hover:text-white hover:bg-slate-800/50 transition-all cursor-pointer" data-slide-index="1">
+                <i data-lucide="pie-chart" class="w-4 h-4 text-sky-400"></i>
+                <span class="font-bold">Tableau</span>
+                <span class="text-slate-500 hidden sm:inline">&bull;</span>
+                <span class="hidden sm:inline">E-Commerce</span>
+              </button>
+
+              <button class="dash-tab-btn px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-2 border border-transparent text-slate-400 hover:text-white hover:bg-slate-800/50 transition-all cursor-pointer" data-slide-index="2">
+                <i data-lucide="layers" class="w-4 h-4 text-emerald-400"></i>
+                <span class="font-bold">Qlik Sense</span>
+                <span class="text-slate-500 hidden sm:inline">&bull;</span>
+                <span class="hidden sm:inline">Finance</span>
+              </button>
+
+              <button class="dash-tab-btn px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-2 border border-transparent text-slate-400 hover:text-white hover:bg-slate-800/50 transition-all cursor-pointer" data-slide-index="3">
+                <i data-lucide="pill" class="w-4 h-4 text-teal-400"></i>
+                <span class="font-bold">Pharmacy AI</span>
+                <span class="text-slate-500 hidden sm:inline">&bull;</span>
+                <span class="hidden sm:inline">Health & Bot</span>
+              </button>
+            </div>
+
+            <!-- Slide Navigation Controls -->
+            <div class="flex items-center gap-2.5">
+              <span id="carouselActiveIndicator" class="text-xs font-mono text-slate-400 hidden md:inline">Dashboard 1 of 4</span>
+              <button id="carouselPrevBtn" class="p-2 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-white/10 text-slate-300 hover:text-white transition-all cursor-pointer" aria-label="Previous Dashboard">
+                <i data-lucide="chevron-left" class="w-4 h-4"></i>
+              </button>
+              <button id="carouselNextBtn" class="p-2 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-white/10 text-slate-300 hover:text-white transition-all cursor-pointer" aria-label="Next Dashboard">
+                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Carousel Container & Slides Track -->
+          <div class="dashboard-carousel-container relative">
+            <div id="dashboardCarouselTrack" class="dashboard-carousel-track">
+
+              <!-- ==========================================================
+                   SLIDE 1: Power BI - Sales & Marketing Dashboard
+                   ========================================================== -->
+              <div class="dashboard-slide active-slide" data-slide="0">
+                
+                <!-- Browser Mockup Window Bar -->
+                <div class="flex flex-wrap items-center justify-between pb-3 mb-4 border-b border-white/10 gap-3">
+                  <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+                    <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+                    <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                    <span class="ml-2 font-mono text-xs text-slate-400 truncate max-w-xs sm:max-w-md">app.powerbi.com/groups/me/reports/sales-marketing-executive</span>
+                  </div>
+                  <div class="flex items-center gap-2.5 text-xs">
+                    <span class="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 border border-amber-500/30 font-mono font-semibold">
+                      <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                      POWER BI DIRECTLAKE
+                    </span>
+                    <span class="px-2.5 py-1 rounded-md bg-slate-900/60 border border-white/10 text-slate-400 text-xs hidden sm:inline">Q3-Q4 B2B Pipeline</span>
+                  </div>
+                </div>
+
+                <!-- Slide Title & Badges Bar -->
+                <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+                  <div>
+                    <div class="flex items-center gap-2 mb-1.5">
+                      <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-500/15 text-amber-300 border border-amber-500/30">
+                        Software: Microsoft Power BI
+                      </span>
+                      <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-teal-500/15 text-teal-300 border border-teal-500/30">
+                        Domain: Sales & Marketing
+                      </span>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-white">Sales & Marketing Performance Dashboard</h3>
+                  </div>
+                  <div class="text-xs text-slate-400 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Live Data Refresh: 2 mins ago
+                  </div>
+                </div>
+
+                <!-- KPI Metric Cards (4 Grid) -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3.5 mb-5">
+                  <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-white/5">
+                    <div class="text-xs text-slate-400 mb-1 flex items-center justify-between">
+                      <span>Total Pipeline</span>
+                      <i data-lucide="trending-up" class="w-3.5 h-3.5 text-teal-400"></i>
+                    </div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-white">$38.6M</div>
+                    <div class="text-[11px] text-teal-400 font-semibold mt-1">+24.2% YoY Growth</div>
+                  </div>
+
+                  <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-white/5">
+                    <div class="text-xs text-slate-400 mb-1 flex items-center justify-between">
+                      <span>Customer Acq. Cost (CAC)</span>
+                      <i data-lucide="zap" class="w-3.5 h-3.5 text-sky-400"></i>
+                    </div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-white">$480</div>
+                    <div class="text-[11px] text-emerald-400 font-semibold mt-1">-18.4% Cost Reduction</div>
+                  </div>
+
+                  <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-white/5">
+                    <div class="text-xs text-slate-400 mb-1 flex items-center justify-between">
+                      <span>Qualified Leads (MQL)</span>
+                      <i data-lucide="users" class="w-3.5 h-3.5 text-amber-400"></i>
+                    </div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-white">14,850</div>
+                    <div class="text-[11px] text-amber-300 font-semibold mt-1">22.4% Lead-to-Opp Rate</div>
+                  </div>
+
+                  <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-white/5">
+                    <div class="text-xs text-slate-400 mb-1 flex items-center justify-between">
+                      <span>Closed-Won ARR</span>
+                      <i data-lucide="check-circle" class="w-3.5 h-3.5 text-purple-400"></i>
+                    </div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-white">$12.4M</div>
+                    <div class="text-[11px] text-purple-300 font-semibold mt-1">108% Quota Attainment</div>
+                  </div>
+                </div>
+
+                <!-- Main Visuals Area: Chart + Channel Performance Breakdown -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 mb-4">
+                  <!-- Chart Left (7 cols) -->
+                  <div class="lg:col-span-7 p-4 rounded-2xl bg-slate-950/50 border border-white/10">
+                    <div class="flex items-center justify-between mb-3">
+                      <div class="text-xs font-semibold text-white flex items-center gap-2">
+                        <i data-lucide="line-chart" class="w-3.5 h-3.5 text-amber-400"></i>
+                        Monthly Pipeline Generation vs Spend ($M)
+                      </div>
+                      <span class="text-[11px] font-mono text-slate-400">Power BI DirectLake Model</span>
+                    </div>
+                    <div class="h-60 sm:h-64 w-full relative">
+                      <canvas id="salesChartCanvas"></canvas>
+                    </div>
+                  </div>
+
+                  <!-- Channel Performance Right (5 cols) -->
+                  <div class="lg:col-span-5 p-4 rounded-2xl bg-slate-950/50 border border-white/10 flex flex-col justify-between">
+                    <div>
+                      <div class="text-xs font-semibold text-white mb-3 flex items-center justify-between">
+                        <span>Multi-Channel Attribution</span>
+                        <span class="text-[11px] text-teal-400 font-mono">ROI Multiplier</span>
+                      </div>
+                      
+                      <div class="space-y-3">
+                        <div>
+                          <div class="flex justify-between text-xs mb-1">
+                            <span class="text-slate-300 font-medium">Enterprise ABM & Outbound</span>
+                            <span class="text-amber-400 font-mono font-semibold">$16.2M &bull; 42%</span>
+                          </div>
+                          <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-amber-400 to-amber-500 rounded-full" style="width: 78%"></div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <div class="flex justify-between text-xs mb-1">
+                            <span class="text-slate-300 font-medium">Organic Inbound & Search</span>
+                            <span class="text-teal-400 font-mono font-semibold">$10.0M &bull; 26%</span>
+                          </div>
+                          <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-teal-400 to-teal-500 rounded-full" style="width: 58%"></div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <div class="flex justify-between text-xs mb-1">
+                            <span class="text-slate-300 font-medium">Global Partner Ecosystem</span>
+                            <span class="text-sky-400 font-mono font-semibold">$7.8M &bull; 20%</span>
+                          </div>
+                          <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-sky-400 to-sky-500 rounded-full" style="width: 44%"></div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <div class="flex justify-between text-xs mb-1">
+                            <span class="text-slate-300 font-medium">Paid Performance Media</span>
+                            <span class="text-purple-400 font-mono font-semibold">$4.6M &bull; 12%</span>
+                          </div>
+                          <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-purple-400 to-purple-500 rounded-full" style="width: 32%"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-400">
+                      <span>Conversion Efficiency: <strong class="text-emerald-400">3.8x ROI</strong></span>
+                      <span class="text-slate-500 font-mono">CAC Payback: 5.2 Mos</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide Footer Integration Bar -->
+                <div class="pt-3 border-t border-white/10 flex flex-wrap items-center justify-between text-xs text-slate-400 gap-2">
+                  <div class="flex items-center gap-3">
+                    <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-amber-400"></span> Synced: Power BI DirectLake</span>
+                    <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-sky-400"></span> Snowflake Data Warehouse</span>
+                    <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-teal-400"></span> Salesforce CRM Integration</span>
+                  </div>
+                  <div class="font-mono text-[11px] text-amber-400">Sub-second DAX Semantic Query</div>
+                </div>
+
+              </div>
+
+              <!-- ==========================================================
+                   SLIDE 2: Tableau - E-Commerce Dashboard
+                   ========================================================== -->
+              <div class="dashboard-slide" data-slide="1">
+                
+                <!-- Browser Mockup Window Bar -->
+                <div class="flex flex-wrap items-center justify-between pb-3 mb-4 border-b border-white/10 gap-3">
+                  <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+                    <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+                    <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                    <span class="ml-2 font-mono text-xs text-slate-400 truncate max-w-xs sm:max-w-md">tableau.anatechlabs.cloud/#/site/analytics/views/ecommerce-omnichannel</span>
+                  </div>
+                  <div class="flex items-center gap-2.5 text-xs">
+                    <span class="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-sky-500/10 text-sky-400 border border-sky-500/30 font-mono font-semibold">
+                      <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+                      TABLEAU CLOUD LIVE
+                    </span>
+                    <span class="px-2.5 py-1 rounded-md bg-slate-900/60 border border-white/10 text-slate-400 text-xs hidden sm:inline">Omnichannel Store CDC</span>
+                  </div>
+                </div>
+
+                <!-- Slide Title & Badges Bar -->
+                <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+                  <div>
+                    <div class="flex items-center gap-2 mb-1.5">
+                      <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-sky-500/15 text-sky-300 border border-sky-500/30">
+                        Software: Tableau Desktop / Cloud
+                      </span>
+                      <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-purple-500/15 text-purple-300 border border-purple-500/30">
+                        Domain: E-Commerce & Retail
+                      </span>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-white">E-Commerce Omnichannel & Customer Lifetime Value (CLV)</h3>
+                  </div>
+                  <div class="text-xs text-slate-400 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span> 84,500 Real-Time Shoppers
+                  </div>
+                </div>
+
+                <!-- KPI Metric Cards (4 Grid) -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3.5 mb-5">
+                  <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-white/5">
+                    <div class="text-xs text-slate-400 mb-1 flex items-center justify-between">
+                      <span>Gross Merch. Value (GMV)</span>
+                      <i data-lucide="shopping-bag" class="w-3.5 h-3.5 text-sky-400"></i>
+                    </div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-white">$54.2M</div>
+                    <div class="text-[11px] text-sky-400 font-semibold mt-1">+32.1% YoY Velocity</div>
+                  </div>
+
+                  <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-white/5">
+                    <div class="text-xs text-slate-400 mb-1 flex items-center justify-between">
+                      <span>Average Order Value (AOV)</span>
+                      <i data-lucide="credit-card" class="w-3.5 h-3.5 text-teal-400"></i>
+                    </div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-white">$142.80</div>
+                    <div class="text-[11px] text-teal-400 font-semibold mt-1">+$14.20 via Bundling</div>
+                  </div>
+
+                  <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-white/5">
+                    <div class="text-xs text-slate-400 mb-1 flex items-center justify-between">
+                      <span>Cart Abandonment Rate</span>
+                      <i data-lucide="percent" class="w-3.5 h-3.5 text-purple-400"></i>
+                    </div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-white">58.4%</div>
+                    <div class="text-[11px] text-emerald-400 font-semibold mt-1">-8.6% Recovered via AI</div>
+                  </div>
+
+                  <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-white/5">
+                    <div class="text-xs text-slate-400 mb-1 flex items-center justify-between">
+                      <span>Repeat Purchase Rate</span>
+                      <i data-lucide="refresh-cw" class="w-3.5 h-3.5 text-emerald-400"></i>
+                    </div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-white">43.8%</div>
+                    <div class="text-[11px] text-emerald-300 font-semibold mt-1">High-LTV Segment</div>
+                  </div>
+                </div>
+
+                <!-- Main Visuals Area: Chart + Category Distribution -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 mb-4">
+                  <!-- Chart Left (7 cols) -->
+                  <div class="lg:col-span-7 p-4 rounded-2xl bg-slate-950/50 border border-white/10">
+                    <div class="flex items-center justify-between mb-3">
+                      <div class="text-xs font-semibold text-white flex items-center gap-2">
+                        <i data-lucide="bar-chart-3" class="w-3.5 h-3.5 text-sky-400"></i>
+                        Monthly GMV ($M) & Cart Recovery Trend
+                      </div>
+                      <span class="text-[11px] font-mono text-slate-400">Tableau Hyper Extract</span>
+                    </div>
+                    <div class="h-60 sm:h-64 w-full relative">
+                      <canvas id="ecommerceChartCanvas"></canvas>
+                    </div>
+                  </div>
+
+                  <!-- Category Velocity Right (5 cols) -->
+                  <div class="lg:col-span-5 p-4 rounded-2xl bg-slate-950/50 border border-white/10 flex flex-col justify-between">
+                    <div>
+                      <div class="text-xs font-semibold text-white mb-3 flex items-center justify-between">
+                        <span>Top Merchandising Verticals</span>
+                        <span class="text-[11px] text-sky-400 font-mono">30-Day Growth</span>
+                      </div>
+                      
+                      <div class="space-y-3">
+                        <div class="p-2 rounded-xl bg-slate-900/70 border border-white/5 flex items-center justify-between">
+                          <div class="flex items-center gap-2.5">
+                            <span class="w-7 h-7 rounded-lg bg-sky-500/10 text-sky-400 flex items-center justify-center font-bold text-xs">1</span>
+                            <div>
+                              <div class="text-xs font-bold text-white">Consumer Tech & Gadgets</div>
+                              <div class="text-[10px] text-slate-400">18.4k Units &bull; 62% Mobile Checkout</div>
+                            </div>
+                          </div>
+                          <div class="text-right">
+                            <div class="text-xs font-bold text-white font-mono">$22.4M</div>
+                            <span class="text-[10px] text-emerald-400 font-semibold">+28% YoY</span>
+                          </div>
+                        </div>
+
+                        <div class="p-2 rounded-xl bg-slate-900/70 border border-white/5 flex items-center justify-between">
+                          <div class="flex items-center gap-2.5">
+                            <span class="w-7 h-7 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center font-bold text-xs">2</span>
+                            <div>
+                              <div class="text-xs font-bold text-white">Luxury Apparel & Footwear</div>
+                              <div class="text-[10px] text-slate-400">12.1k Units &bull; $184 AOV</div>
+                            </div>
+                          </div>
+                          <div class="text-right">
+                            <div class="text-xs font-bold text-white font-mono">$14.2M</div>
+                            <span class="text-[10px] text-emerald-400 font-semibold">+34% YoY</span>
+                          </div>
+                        </div>
+
+                        <div class="p-2 rounded-xl bg-slate-900/70 border border-white/5 flex items-center justify-between">
+                          <div class="flex items-center gap-2.5">
+                            <span class="w-7 h-7 rounded-lg bg-teal-500/10 text-teal-400 flex items-center justify-center font-bold text-xs">3</span>
+                            <div>
+                              <div class="text-xs font-bold text-white">Home Living & Smart Decor</div>
+                              <div class="text-[10px] text-slate-400">9.4k Units &bull; Low Return Rate</div>
+                            </div>
+                          </div>
+                          <div class="text-right">
+                            <div class="text-xs font-bold text-white font-mono">$10.8M</div>
+                            <span class="text-[10px] text-emerald-400 font-semibold">+19% YoY</span>
+                          </div>
+                        </div>
+
+                        <div class="p-2 rounded-xl bg-slate-900/70 border border-white/5 flex items-center justify-between">
+                          <div class="flex items-center gap-2.5">
+                            <span class="w-7 h-7 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold text-xs">4</span>
+                            <div>
+                              <div class="text-xs font-bold text-white">Health, Nutrition & Wellness</div>
+                              <div class="text-[10px] text-slate-400">Subscription Auto-Refill</div>
+                            </div>
+                          </div>
+                          <div class="text-right">
+                            <div class="text-xs font-bold text-white font-mono">$6.8M</div>
+                            <span class="text-[10px] text-emerald-400 font-semibold">+44% YoY</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-400">
+                      <span>Checkout Conversion: <strong class="text-sky-400">3.62%</strong></span>
+                      <span class="text-slate-500 font-mono">Shopify Plus & BigCommerce</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide Footer Integration Bar -->
+                <div class="pt-3 border-t border-white/10 flex flex-wrap items-center justify-between text-xs text-slate-400 gap-2">
+                  <div class="flex items-center gap-3">
+                    <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-sky-400"></span> Tableau Server & Cloud</span>
+                    <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-teal-400"></span> Databricks Delta Lakehouse</span>
+                    <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-purple-400"></span> Apache Kafka Event Hub</span>
+                  </div>
+                  <div class="font-mono text-[11px] text-sky-400">Automated Webhook Sync Active</div>
+                </div>
+
+              </div>
+
+              <!-- ==========================================================
+                   SLIDE 3: Qlik Sense - Corporate Finance Dashboard
+                   ========================================================== -->
+              <div class="dashboard-slide" data-slide="2">
+                
+                <!-- Browser Mockup Window Bar -->
+                <div class="flex flex-wrap items-center justify-between pb-3 mb-4 border-b border-white/10 gap-3">
+                  <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+                    <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+                    <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                    <span class="ml-2 font-mono text-xs text-slate-400 truncate max-w-xs sm:max-w-md">qlik.anatechlabs.cloud/sense/app/cfo-corporate-finance-cockpit</span>
+                  </div>
+                  <div class="flex items-center gap-2.5 text-xs">
+                    <span class="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 font-mono font-semibold">
+                      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                      QLIK ASSOCIATIVE ENGINE
+                    </span>
+                    <span class="px-2.5 py-1 rounded-md bg-slate-900/60 border border-white/10 text-slate-400 text-xs hidden sm:inline">Consolidated USD</span>
+                  </div>
+                </div>
+
+                <!-- Slide Title & Badges Bar -->
+                <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+                  <div>
+                    <div class="flex items-center gap-2 mb-1.5">
+                      <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+                        Software: Qlik Sense Enterprise
+                      </span>
+                      <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-teal-500/15 text-teal-300 border border-teal-500/30">
+                        Domain: Corporate Finance & Treasury
+                      </span>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-white">Executive Financial Health, Cash Flow & Working Capital Cockpit</h3>
+                  </div>
+                  <div class="text-xs text-slate-400 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span> In-Memory Associative Calculation
+                  </div>
+                </div>
+
+                <!-- KPI Metric Cards (4 Grid) -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3.5 mb-5">
+                  <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-white/5">
+                    <div class="text-xs text-slate-400 mb-1 flex items-center justify-between">
+                      <span>Operating EBITDA</span>
+                      <i data-lucide="dollar-sign" class="w-3.5 h-3.5 text-emerald-400"></i>
+                    </div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-white">$18.9M</div>
+                    <div class="text-[11px] text-emerald-400 font-semibold mt-1">112% to Target (+4.8%)</div>
+                  </div>
+
+                  <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-white/5">
+                    <div class="text-xs text-slate-400 mb-1 flex items-center justify-between">
+                      <span>Free Cash Flow (FCF)</span>
+                      <i data-lucide="activity" class="w-3.5 h-3.5 text-teal-400"></i>
+                    </div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-white">$22.4M</div>
+                    <div class="text-[11px] text-teal-400 font-semibold mt-1">+$3.6M Surplus Variance</div>
+                  </div>
+
+                  <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-white/5">
+                    <div class="text-xs text-slate-400 mb-1 flex items-center justify-between">
+                      <span>Days Sales Out. (DSO)</span>
+                      <i data-lucide="clock" class="w-3.5 h-3.5 text-sky-400"></i>
+                    </div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-white">34 Days</div>
+                    <div class="text-[11px] text-sky-400 font-semibold mt-1">Accelerated from 48 Days</div>
+                  </div>
+
+                  <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-white/5">
+                    <div class="text-xs text-slate-400 mb-1 flex items-center justify-between">
+                      <span>Gross Profit Margin</span>
+                      <i data-lucide="shield-check" class="w-3.5 h-3.5 text-purple-400"></i>
+                    </div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-white">62.8%</div>
+                    <div class="text-[11px] text-purple-300 font-semibold mt-1">Top Quartile Benchmark</div>
+                  </div>
+                </div>
+
+                <!-- Main Visuals Area: Financial Bridge Chart + Balance Sheet Ratios -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 mb-4">
+                  <!-- Chart Left (7 cols) -->
+                  <div class="lg:col-span-7 p-4 rounded-2xl bg-slate-950/50 border border-white/10">
+                    <div class="flex items-center justify-between mb-3">
+                      <div class="text-xs font-semibold text-white flex items-center gap-2">
+                        <i data-lucide="bar-chart" class="w-3.5 h-3.5 text-emerald-400"></i>
+                        Quarterly Revenue, COGS & Net EBITDA Bridge ($M)
+                      </div>
+                      <span class="text-[11px] font-mono text-slate-400">Qlik In-Memory QVD</span>
+                    </div>
+                    <div class="h-60 sm:h-64 w-full relative">
+                      <canvas id="financeChartCanvas"></canvas>
+                    </div>
+                  </div>
+
+                  <!-- Financial Health & Treasury Right (5 cols) -->
+                  <div class="lg:col-span-5 p-4 rounded-2xl bg-slate-950/50 border border-white/10 flex flex-col justify-between">
+                    <div>
+                      <div class="text-xs font-semibold text-white mb-3 flex items-center justify-between">
+                        <span>Treasury & Liquidity Governance</span>
+                        <span class="text-[11px] text-emerald-400 font-mono">Qlik Associative</span>
+                      </div>
+                      
+                      <div class="grid grid-cols-2 gap-3 mb-3">
+                        <div class="p-3 rounded-xl bg-slate-900/80 border border-white/5">
+                          <span class="text-[11px] text-slate-400 block">Quick Ratio (Acid Test)</span>
+                          <div class="text-lg font-bold text-white mt-0.5">2.4x</div>
+                          <span class="text-[10px] text-emerald-400 font-medium">&bull; Robust Liquidity</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-slate-900/80 border border-white/5">
+                          <span class="text-[11px] text-slate-400 block">Current Ratio</span>
+                          <div class="text-lg font-bold text-white mt-0.5">3.1x</div>
+                          <span class="text-[10px] text-emerald-400 font-medium">&bull; Above Target 2.0x</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-slate-900/80 border border-white/5">
+                          <span class="text-[11px] text-slate-400 block">Debt-to-Equity Ratio</span>
+                          <div class="text-lg font-bold text-white mt-0.5">0.38</div>
+                          <span class="text-[10px] text-teal-400 font-medium">&bull; Conservative Debt</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-slate-900/80 border border-white/5">
+                          <span class="text-[11px] text-slate-400 block">Opex Budget Variance</span>
+                          <div class="text-lg font-bold text-white mt-0.5">-3.4%</div>
+                          <span class="text-[10px] text-emerald-400 font-medium">&bull; Under Budget</span>
+                        </div>
+                      </div>
+
+                      <div class="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-[11px] text-emerald-300 flex items-center gap-2">
+                        <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                        <span>Audit-Ready: SAP S/4HANA GL reconciled with zero unreconciled variances.</span>
+                      </div>
+                    </div>
+
+                    <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-400">
+                      <span>Working Capital: <strong class="text-emerald-400">$34.8M Net</strong></span>
+                      <span class="text-slate-500 font-mono">Qlik Sense Enterprise</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide Footer Integration Bar -->
+                <div class="pt-3 border-t border-white/10 flex flex-wrap items-center justify-between text-xs text-slate-400 gap-2">
+                  <div class="flex items-center gap-3">
+                    <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-400"></span> Qlik In-Memory Associative Engine</span>
+                    <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-sky-400"></span> SAP S/4HANA Financials</span>
+                    <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-purple-400"></span> Oracle Fusion General Ledger</span>
+                  </div>
+                  <div class="font-mono text-[11px] text-emerald-400">Associative Filtering Enabled</div>
+                </div>
+
+              </div>
+
+              <!-- ==========================================================
+                   SLIDE 4: Pharmacy Dashboard WITH EMBEDDED AI CHATBOT
+                   ========================================================== -->
+              <div class="dashboard-slide" data-slide="3">
+                
+                <!-- Browser Mockup Window Bar -->
+                <div class="flex flex-wrap items-center justify-between pb-3 mb-4 border-b border-white/10 gap-3">
+                  <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+                    <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+                    <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                    <span class="ml-2 font-mono text-xs text-slate-400 truncate max-w-xs sm:max-w-md">pharmacy-intelligence.anatechlabs.cloud/clinical-operations</span>
+                  </div>
+                  <div class="flex items-center gap-2.5 text-xs">
+                    <span class="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-teal-500/10 text-teal-400 border border-teal-500/30 font-mono font-semibold">
+                      <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+                      HIPAA CLINICAL AI ACTIVE
+                    </span>
+                    <span class="px-2.5 py-1 rounded-md bg-slate-900/60 border border-white/10 text-slate-400 text-xs hidden sm:inline">24 Outlets Synced</span>
+                  </div>
+                </div>
+
+                <!-- Slide Title & Badges Bar -->
+                <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+                  <div>
+                    <div class="flex items-center gap-2 mb-1.5">
+                      <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-teal-500/15 text-teal-300 border border-teal-500/30">
+                        Software: Power BI Healthcare + Clinical AI Copilot
+                      </span>
+                      <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-rose-500/15 text-rose-300 border border-rose-500/30">
+                        Domain: Pharmacy & Healthcare
+                      </span>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-white">Pharmacy Operations, Drug Inventory & AI Clinical Copilot</h3>
+                  </div>
+                  <div class="text-xs text-teal-400 flex items-center gap-2 font-mono">
+                    <i data-lucide="bot" class="w-4 h-4"></i> Interactive Chatbot Active Below
+                  </div>
+                </div>
+
+                <!-- KPI Metric Cards (4 Grid) -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3.5 mb-5">
+                  <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-white/5">
+                    <div class="text-xs text-slate-400 mb-1 flex items-center justify-between">
+                      <span>Monthly Rx Volume</span>
+                      <i data-lucide="pill" class="w-3.5 h-3.5 text-teal-400"></i>
+                    </div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-white">148,200</div>
+                    <div class="text-[11px] text-teal-400 font-semibold mt-1">+14.5% Prescription Velocity</div>
+                  </div>
+
+                  <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-white/5">
+                    <div class="text-xs text-slate-400 mb-1 flex items-center justify-between">
+                      <span>Critical Drug Stockout Alert</span>
+                      <i data-lucide="shield-alert" class="w-3.5 h-3.5 text-emerald-400"></i>
+                    </div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-white">0.0%</div>
+                    <div class="text-[11px] text-emerald-400 font-semibold mt-1">Zero Stockout SLA Met</div>
+                  </div>
+
+                  <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-white/5">
+                    <div class="text-xs text-slate-400 mb-1 flex items-center justify-between">
+                      <span>Drug Interaction Catch Rate</span>
+                      <i data-lucide="heart-pulse" class="w-3.5 h-3.5 text-rose-400"></i>
+                    </div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-white">99.8%</div>
+                    <div class="text-[11px] text-rose-300 font-semibold mt-1">AI Safety Protocol Verified</div>
+                  </div>
+
+                  <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-white/5">
+                    <div class="text-xs text-slate-400 mb-1 flex items-center justify-between">
+                      <span>Formulary Cost Savings</span>
+                      <i data-lucide="sparkles" class="w-3.5 h-3.5 text-purple-400"></i>
+                    </div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-white">97.6%</div>
+                    <div class="text-[11px] text-purple-300 font-semibold mt-1">+$420,000 Generic Margin</div>
+                  </div>
+                </div>
+
+                <!-- Main Visuals Area: Pharmacy Chart (Left) + EMBEDDED PHARMACY AI CHATBOT (Right) -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 mb-4">
+                  
+                  <!-- Pharmacy Analytics Chart Left (7 cols) -->
+                  <div class="lg:col-span-7 p-4 rounded-2xl bg-slate-950/50 border border-white/10 flex flex-col justify-between">
+                    <div>
+                      <div class="flex items-center justify-between mb-3">
+                        <div class="text-xs font-semibold text-white flex items-center gap-2">
+                          <i data-lucide="activity" class="w-3.5 h-3.5 text-teal-400"></i>
+                          Prescription Fulfillment Velocity & Inventory Turns
+                        </div>
+                        <span class="text-[11px] font-mono text-slate-400">HL7 / FHIR Ingestion</span>
+                      </div>
+                      <div class="h-60 sm:h-64 w-full relative">
+                        <canvas id="pharmacyChartCanvas"></canvas>
+                      </div>
+                    </div>
+
+                    <div class="mt-3 pt-3 border-t border-white/5 grid grid-cols-3 gap-2 text-center">
+                      <div class="p-2 rounded-xl bg-slate-900/60 border border-white/5">
+                        <span class="text-[10px] text-slate-400 block">Antibiotics Stock</span>
+                        <span class="text-xs font-bold text-teal-400 font-mono">98.4% Optimal</span>
+                      </div>
+                      <div class="p-2 rounded-xl bg-slate-900/60 border border-white/5">
+                        <span class="text-[10px] text-slate-400 block">Chronic Care Refill</span>
+                        <span class="text-xs font-bold text-sky-400 font-mono">Auto-Scheduled</span>
+                      </div>
+                      <div class="p-2 rounded-xl bg-slate-900/60 border border-white/5">
+                        <span class="text-[10px] text-slate-400 block">FDA Recall Scan</span>
+                        <span class="text-xs font-bold text-emerald-400 font-mono">0 Flags Detected</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- EMBEDDED PHARMACY CHATBOT Right (5 cols) -->
+                  <div class="lg:col-span-5 pharmacy-chat-box p-4 border border-teal-500/30 flex flex-col justify-between h-[360px]">
+                    
+                    <!-- Chat Header -->
+                    <div class="pb-2.5 mb-2 border-b border-white/10 flex items-center justify-between">
+                      <div class="flex items-center gap-2.5">
+                        <div class="w-8 h-8 rounded-xl bg-teal-500/20 border border-teal-500/40 text-teal-400 flex items-center justify-center">
+                          <i data-lucide="bot" class="w-4 h-4"></i>
+                        </div>
+                        <div>
+                          <div class="text-xs font-bold text-white flex items-center gap-1.5">
+                            <span>RxClinical AI Copilot</span>
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                          </div>
+                          <span class="text-[10px] text-teal-300 font-mono">Connected to Formulary & FDA DB</span>
+                        </div>
+                      </div>
+                      <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-teal-500/10 text-teal-300 border border-teal-500/30">
+                        Interactive
+                      </span>
+                    </div>
+
+                    <!-- Chat Message Area -->
+                    <div id="pharmacyChatMessages" class="flex-1 overflow-y-auto space-y-2.5 pr-1 text-xs">
+                      <!-- Welcome message -->
+                      <div class="flex items-start gap-2">
+                        <div class="w-5 h-5 rounded-full bg-teal-500/20 text-teal-400 flex items-center justify-center shrink-0 mt-0.5">
+                          <i data-lucide="bot" class="w-3 h-3"></i>
+                        </div>
+                        <div class="p-2.5 rounded-xl rounded-tl-sm bg-slate-900 border border-white/10 text-slate-200 text-[11px] leading-relaxed max-w-[90%]">
+                          👋 <strong>RxClinical AI:</strong> I am connected to your pharmacy inventory and drug interaction engine. Click a prompt below or type your query:
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Quick Prompt Chips -->
+                    <div class="pt-2 pb-2 flex flex-wrap gap-1.5">
+                      <button type="button" class="pharmacy-prompt-chip text-[10px] px-2 py-1 rounded-lg bg-teal-500/15 hover:bg-teal-500/25 text-teal-300 border border-teal-500/30 transition-all cursor-pointer" data-question="Check stock for Amoxicillin & Ozempic">
+                        💊 Stock: Amoxicillin & Ozempic
+                      </button>
+                      <button type="button" class="pharmacy-prompt-chip text-[10px] px-2 py-1 rounded-lg bg-sky-500/15 hover:bg-sky-500/25 text-sky-300 border border-sky-500/30 transition-all cursor-pointer" data-question="Check drug interaction for Warfarin + Ibuprofen">
+                        ⚠️ Drug Interaction Check
+                      </button>
+                      <button type="button" class="pharmacy-prompt-chip text-[10px] px-2 py-1 rounded-lg bg-purple-500/15 hover:bg-purple-500/25 text-purple-300 border border-purple-500/30 transition-all cursor-pointer" data-question="Forecast winter antibiotic demand">
+                        📈 Forecast Refill Demand
+                      </button>
+                    </div>
+
+                    <!-- Chat Input Field & Send Button -->
+                    <form id="pharmacyChatForm" class="pt-2 border-t border-white/10 flex items-center gap-2">
+                      <input id="pharmacyChatInput" type="text" placeholder="Ask RxClinical Copilot..." class="flex-1 px-3 py-1.5 rounded-xl bg-slate-900/90 border border-white/10 text-white placeholder-slate-500 text-xs focus:outline-none focus:border-teal-400 transition-all">
+                      <button type="submit" class="p-2 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold transition-all cursor-pointer shrink-0" aria-label="Send Pharmacy Question">
+                        <i data-lucide="send" class="w-3.5 h-3.5"></i>
+                      </button>
+                    </form>
+
+                  </div>
+
+                </div>
+
+                <!-- Slide Footer Integration Bar -->
+                <div class="pt-3 border-t border-white/10 flex flex-wrap items-center justify-between text-xs text-slate-400 gap-2">
+                  <div class="flex items-center gap-3">
+                    <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-teal-400"></span> HIPAA & HITECH Compliant</span>
+                    <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-rose-400"></span> FDA Interaction DB Linked</span>
+                    <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-sky-400"></span> HL7 / FHIR Data Lakehouse</span>
+                  </div>
+                  <div class="font-mono text-[11px] text-teal-400">AI Clinical Decision Support (CDS)</div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Bottom Indicators Bar & Slider Status -->
+          <div class="mt-4 pt-3 border-t border-white/10 flex flex-wrap items-center justify-between text-xs text-slate-400 gap-3">
             <div class="flex items-center gap-2">
-              <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
-              <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
-              <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
-              <span class="ml-2 font-mono text-xs text-slate-400">data-mesh-control-plane.anatechlabs.cloud</span>
-            </div>
-            <div class="flex items-center gap-3 text-xs">
-              <span class="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-teal-500/10 text-teal-400 border border-teal-500/20 font-mono">
-                <span class="w-2 h-2 rounded-full bg-teal-400 animate-ping"></span>
-                LIVE PIPELINE
-              </span>
-              <div class="inline-flex rounded-lg border border-white/10 p-0.5 bg-slate-900/60">
-                <button class="hero-timeframe-btn px-2.5 py-1 rounded text-xs text-slate-400 hover:text-white" data-frame="1M">1M</button>
-                <button class="hero-timeframe-btn px-2.5 py-1 rounded text-xs text-slate-400 hover:text-white" data-frame="3M">3M</button>
-                <button class="hero-timeframe-btn px-2.5 py-1 rounded text-xs bg-teal-500/20 text-teal-400 border border-teal-500/40" data-frame="1Y">1Y</button>
+              <span class="text-xs text-slate-400">Slide to view:</span>
+              <div class="flex items-center gap-1.5">
+                <button class="carousel-indicator-dot active w-8 h-2 rounded-full bg-teal-400 cursor-pointer" data-slide-index="0" aria-label="Slide 1"></button>
+                <button class="carousel-indicator-dot w-2 h-2 rounded-full bg-slate-700 hover:bg-slate-500 cursor-pointer" data-slide-index="1" aria-label="Slide 2"></button>
+                <button class="carousel-indicator-dot w-2 h-2 rounded-full bg-slate-700 hover:bg-slate-500 cursor-pointer" data-slide-index="2" aria-label="Slide 3"></button>
+                <button class="carousel-indicator-dot w-2 h-2 rounded-full bg-slate-700 hover:bg-slate-500 cursor-pointer" data-slide-index="3" aria-label="Slide 4"></button>
               </div>
             </div>
-          </div>
 
-          <!-- Hero KPI Quick Strip -->
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-            <div class="p-3.5 rounded-xl bg-slate-900/50 border border-white/5">
-              <div class="text-xs text-slate-400 mb-1 flex items-center justify-between">
-                <span>Revenue Impact</span>
-                <i data-lucide="trending-up" class="w-3.5 h-3.5 text-teal-400"></i>
-              </div>
-              <div class="text-xl sm:text-2xl font-bold text-white">$14.8M</div>
-              <div class="text-[11px] text-teal-400 font-medium mt-1">+28.4% YoY Uplift</div>
+            <div class="flex items-center gap-4 text-xs">
+              <span class="text-slate-400 hidden sm:inline">Use arrows <kbd class="px-1.5 py-0.5 rounded bg-slate-900 border border-white/10 text-[10px]">&larr;</kbd> <kbd class="px-1.5 py-0.5 rounded bg-slate-900 border border-white/10 text-[10px]">&rarr;</kbd> or click tabs above to switch</span>
+              <span class="text-teal-400 font-mono font-semibold">Interactive Demos</span>
             </div>
-
-            <div class="p-3.5 rounded-xl bg-slate-900/50 border border-white/5">
-              <div class="text-xs text-slate-400 mb-1 flex items-center justify-between">
-                <span>ETL Latency</span>
-                <i data-lucide="zap" class="w-3.5 h-3.5 text-sky-400"></i>
-              </div>
-              <div class="text-xl sm:text-2xl font-bold text-white">12.4 ms</div>
-              <div class="text-[11px] text-sky-400 font-medium mt-1">-65% Cloud Wait</div>
-            </div>
-
-            <div class="p-3.5 rounded-xl bg-slate-900/50 border border-white/5">
-              <div class="text-xs text-slate-400 mb-1 flex items-center justify-between">
-                <span>Model Accuracy</span>
-                <i data-lucide="brain-circuit" class="w-3.5 h-3.5 text-purple-400"></i>
-              </div>
-              <div class="text-xl sm:text-2xl font-bold text-white">99.2%</div>
-              <div class="text-[11px] text-purple-400 font-medium mt-1">Churn & Demand AI</div>
-            </div>
-
-            <div class="p-3.5 rounded-xl bg-slate-900/50 border border-white/5">
-              <div class="text-xs text-slate-400 mb-1 flex items-center justify-between">
-                <span>Active Fabric Mesh</span>
-                <i data-lucide="database" class="w-3.5 h-3.5 text-emerald-400"></i>
-              </div>
-              <div class="text-xl sm:text-2xl font-bold text-white">2.4 TB/day</div>
-              <div class="text-[11px] text-emerald-400 font-medium mt-1">DirectLake Ingestion</div>
-            </div>
-          </div>
-
-          <!-- Live Interactive Chart Canvas -->
-          <div class="h-64 sm:h-72 w-full relative">
-            <canvas id="heroChartCanvas"></canvas>
-          </div>
-
-          <!-- Bottom Visual Bar: Mini Integrations -->
-          <div class="mt-4 pt-3 border-t border-white/5 flex flex-wrap items-center justify-between text-xs text-slate-400 gap-2">
-            <div class="flex items-center gap-3">
-              <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-teal-400"></span> Synced: Power BI DirectLake</span>
-              <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-sky-400"></span> Snowflake Warehouse</span>
-              <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-purple-400"></span> Azure Databricks</span>
-            </div>
-            <div class="font-mono text-[11px] text-teal-400">Zero-Downtime Guarantee &bull; SOC2 SLA</div>
           </div>
 
         </div>
