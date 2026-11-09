@@ -115,16 +115,14 @@ let salesChartInstance = null;
 let ecommerceChartInstance = null;
 let financeChartInstance = null;
 let pharmacyChartInstance = null;
-let biDashboardChartInstance = null;
 
 function initCharts() {
-  initSalesChart();
-  initEcommerceChart();
-  initFinanceChart();
-  initPharmacyChart();
-  initBiDashboardChart();
-  initDashboardCarousel();
-  initPharmacyChatbot();
+  try { initSalesChart(); } catch (e) { console.error('Sales chart init error:', e); }
+  try { initEcommerceChart(); } catch (e) { console.error('Ecommerce chart init error:', e); }
+  try { initFinanceChart(); } catch (e) { console.error('Finance chart init error:', e); }
+  try { initPharmacyChart(); } catch (e) { console.error('Pharmacy chart init error:', e); }
+  try { initDashboardCarousel(); } catch (e) { console.error('Dashboard carousel init error:', e); }
+  try { initPharmacyChatbot(); } catch (e) { console.error('Pharmacy chatbot init error:', e); }
 }
 
 /* 3.1 Power BI - Sales & Marketing Chart */
@@ -428,6 +426,8 @@ function initDashboardCarousel() {
   const indicatorDots = document.querySelectorAll('.carousel-indicator-dot');
   const prevBtn = document.getElementById('carouselPrevBtn');
   const nextBtn = document.getElementById('carouselNextBtn');
+  const sidePrevBtn = document.getElementById('carouselSidePrevBtn');
+  const sideNextBtn = document.getElementById('carouselSideNextBtn');
   const activeLabel = document.getElementById('carouselActiveIndicator');
   const container = document.querySelector('.dashboard-carousel-container');
 
@@ -444,18 +444,11 @@ function initDashboardCarousel() {
     'Dashboard 4 of 4: Pharmacy Operations & AI Copilot'
   ];
 
-  const activeTabClasses = [
-    ['border-amber-500/40', 'bg-amber-500/10', 'text-amber-300'],
-    ['border-sky-500/40', 'bg-sky-500/10', 'text-sky-300'],
-    ['border-emerald-500/40', 'bg-emerald-500/10', 'text-emerald-300'],
-    ['border-teal-500/40', 'bg-teal-500/10', 'text-teal-300']
-  ];
-
   function setSlide(index) {
     currentSlide = (index + totalSlides) % totalSlides;
     track.style.transform = `translateX(-${currentSlide * 100}%)`;
 
-    // Update slides visibility
+    // Update slides visibility & accessibility
     slides.forEach((slide, i) => {
       if (i === currentSlide) {
         slide.classList.add('active-slide');
@@ -465,99 +458,139 @@ function initDashboardCarousel() {
     });
 
     // Update tabs
-    tabBtns.forEach((btn, i) => {
-      btn.className = 'dash-tab-btn px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-2 transition-all cursor-pointer border ';
-      if (i === currentSlide) {
-        btn.classList.add('active', ...activeTabClasses[i]);
+    tabBtns.forEach((btn) => {
+      const btnIdx = parseInt(btn.getAttribute('data-slide-index'), 10);
+      if (btnIdx === currentSlide) {
+        btn.classList.add('active');
+        // Auto scroll tab into view horizontally on mobile
+        btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
       } else {
-        btn.classList.add('border-transparent', 'text-slate-400', 'hover:text-white', 'hover:bg-slate-800/50');
+        btn.classList.remove('active');
       }
     });
 
-    // Update dots
-    indicatorDots.forEach((dot, i) => {
-      if (i === currentSlide) {
-        dot.className = 'carousel-indicator-dot active w-8 h-2 rounded-full bg-teal-400 cursor-pointer';
+    // Update indicator dots
+    indicatorDots.forEach((dot) => {
+      const dotIdx = parseInt(dot.getAttribute('data-slide-index'), 10);
+      if (dotIdx === currentSlide) {
+        dot.classList.add('active');
       } else {
-        dot.className = 'carousel-indicator-dot w-2 h-2 rounded-full bg-slate-700 hover:bg-slate-500 cursor-pointer';
+        dot.classList.remove('active');
       }
     });
 
     if (activeLabel) {
-      activeLabel.textContent = slideTitles[currentSlide];
+      activeLabel.textContent = `Dashboard ${currentSlide + 1} of ${totalSlides}`;
     }
 
     // Refresh charts on slide change
     setTimeout(() => {
       [salesChartInstance, ecommerceChartInstance, financeChartInstance, pharmacyChartInstance].forEach(chart => {
-        if (chart) chart.resize();
+        if (chart) {
+          try {
+            chart.resize();
+            chart.update('none');
+          } catch (e) {}
+        }
       });
       if (window.lucide) window.lucide.createIcons();
     }, 150);
   }
 
   // Prev / Next button listeners
-  if (prevBtn) {
-    prevBtn.addEventListener('click', () => {
-      setSlide(currentSlide - 1);
-      resetAutoPlay();
-    });
-  }
+  const handlePrev = (e) => {
+    if (e) e.preventDefault();
+    setSlide(currentSlide - 1);
+    resetAutoPlay();
+  };
 
-  if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
-      setSlide(currentSlide + 1);
-      resetAutoPlay();
-    });
-  }
+  const handleNext = (e) => {
+    if (e) e.preventDefault();
+    setSlide(currentSlide + 1);
+    resetAutoPlay();
+  };
+
+  if (prevBtn) prevBtn.addEventListener('click', handlePrev);
+  if (nextBtn) nextBtn.addEventListener('click', handleNext);
+  if (sidePrevBtn) sidePrevBtn.addEventListener('click', handlePrev);
+  if (sideNextBtn) sideNextBtn.addEventListener('click', handleNext);
 
   // Tab click listeners
   tabBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
       const idx = parseInt(btn.getAttribute('data-slide-index'), 10);
-      setSlide(idx);
-      resetAutoPlay();
+      if (!isNaN(idx)) {
+        setSlide(idx);
+        resetAutoPlay();
+      }
     });
   });
 
   // Indicator dot click listeners
   indicatorDots.forEach((dot) => {
-    dot.addEventListener('click', () => {
+    dot.addEventListener('click', (e) => {
+      e.preventDefault();
       const idx = parseInt(dot.getAttribute('data-slide-index'), 10);
-      setSlide(idx);
-      resetAutoPlay();
+      if (!isNaN(idx)) {
+        setSlide(idx);
+        resetAutoPlay();
+      }
     });
   });
 
-  // Touch Swipe for Mobile
+  // Keyboard navigation when hero section is in view
+  document.addEventListener('keydown', (e) => {
+    const heroSection = document.getElementById('hero');
+    if (!heroSection) return;
+    const rect = heroSection.getBoundingClientRect();
+    const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+    if (isInView) {
+      if (e.key === 'ArrowLeft') {
+        handlePrev(e);
+      } else if (e.key === 'ArrowRight') {
+        handleNext(e);
+      }
+    }
+  });
+
+  // Touch Swipe for Mobile with directional threshold
   let startX = 0;
-  let endX = 0;
+  let startY = 0;
   track.addEventListener('touchstart', (e) => {
+    stopAutoPlay();
     startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
   }, { passive: true });
 
   track.addEventListener('touchend', (e) => {
-    endX = e.changedTouches[0].clientX;
-    const diff = startX - endX;
-    if (Math.abs(diff) > 40) {
-      if (diff > 0) {
+    const endX = e.changedTouches[0].clientX;
+    const endY = e.changedTouches[0].clientY;
+    const diffX = startX - endX;
+    const diffY = startY - endY;
+    if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY)) {
+      if (diffX > 0) {
         setSlide(currentSlide + 1);
       } else {
         setSlide(currentSlide - 1);
       }
-      resetAutoPlay();
     }
+    resetAutoPlay();
   }, { passive: true });
 
-  // Autoplay function (every 8 seconds, pauses on hover)
+  // Autoplay function (every 8 seconds, pauses on hover / touch)
   function startAutoPlay() {
+    stopAutoPlay();
     autoPlayTimer = setInterval(() => {
       setSlide(currentSlide + 1);
     }, 8000);
   }
 
   function stopAutoPlay() {
-    if (autoPlayTimer) clearInterval(autoPlayTimer);
+    if (autoPlayTimer) {
+      clearInterval(autoPlayTimer);
+      autoPlayTimer = null;
+    }
   }
 
   function resetAutoPlay() {
@@ -570,6 +603,8 @@ function initDashboardCarousel() {
     container.addEventListener('mouseleave', startAutoPlay);
   }
 
+  // Initialize first slide state
+  setSlide(0);
   startAutoPlay();
 }
 
@@ -714,7 +749,7 @@ function updateChartThemes(isLight) {
   const textColor = isLight ? '#475569' : '#94a3b8';
   const gridColor = isLight ? 'rgba(0,0,0,0.06)' : 'rgba(255,255,255,0.05)';
 
-  [salesChartInstance, ecommerceChartInstance, financeChartInstance, pharmacyChartInstance, biDashboardChartInstance].forEach(chart => {
+  [salesChartInstance, ecommerceChartInstance, financeChartInstance, pharmacyChartInstance].forEach(chart => {
     if (!chart) return;
     if (chart.options.scales.x) {
       chart.options.scales.x.grid.color = gridColor;

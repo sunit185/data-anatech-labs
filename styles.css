@@ -285,21 +285,38 @@ input[type=range] {
 /* ==========================================================================
    Dashboard Carousel Slider & Embedded Pharmacy Chatbot
    ========================================================================== */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.carousel-tabs-scroller {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
 .dashboard-carousel-container {
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
 .dashboard-carousel-track {
   display: flex;
+  width: 100%;
   transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
   will-change: transform;
 }
 
 .dashboard-slide {
   min-width: 100%;
+  width: 100%;
   flex-shrink: 0;
-  opacity: 0.2;
+  box-sizing: border-box;
+  opacity: 0.15;
   transition: opacity 0.35s ease;
   pointer-events: none;
 }
@@ -309,34 +326,156 @@ input[type=range] {
   pointer-events: auto;
 }
 
+/* Tab button styling */
 .dash-tab-btn {
-  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+  background: rgba(15, 23, 42, 0.5);
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  outline: none;
 }
 
-.dash-tab-btn.active {
-  background: rgba(0, 229, 201, 0.12);
-  border-color: rgba(0, 229, 201, 0.45);
-  color: #00e5c9;
-  box-shadow: 0 4px 20px -4px rgba(0, 229, 201, 0.25);
+@media (min-width: 640px) {
+  .dash-tab-btn {
+    padding: 0.5rem 0.875rem;
+    font-size: 0.8125rem;
+    gap: 0.5rem;
+  }
 }
 
-.light-theme .dash-tab-btn.active {
-  background: rgba(13, 148, 136, 0.12);
-  border-color: rgba(13, 148, 136, 0.5);
+.dash-tab-btn:hover {
+  color: #ffffff;
+  background: rgba(30, 41, 59, 0.75);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.dash-tab-btn.active[data-slide-index="0"] {
+  border-color: rgba(245, 158, 11, 0.5);
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  box-shadow: 0 4px 15px -3px rgba(245, 158, 11, 0.3);
+}
+
+.dash-tab-btn.active[data-slide-index="1"] {
+  border-color: rgba(56, 189, 248, 0.5);
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  box-shadow: 0 4px 15px -3px rgba(56, 189, 248, 0.3);
+}
+
+.dash-tab-btn.active[data-slide-index="2"] {
+  border-color: rgba(16, 185, 129, 0.5);
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  box-shadow: 0 4px 15px -3px rgba(16, 185, 129, 0.3);
+}
+
+.dash-tab-btn.active[data-slide-index="3"] {
+  border-color: rgba(20, 184, 166, 0.5);
+  background: rgba(20, 184, 166, 0.15);
+  color: #2dd4bf;
+  box-shadow: 0 4px 15px -3px rgba(20, 184, 166, 0.3);
+}
+
+/* Light Theme Tab Overrides */
+.light-theme .dash-tab-btn {
+  color: #64748b;
+  background: rgba(241, 245, 249, 0.8);
+  border-color: rgba(203, 213, 225, 0.8);
+}
+.light-theme .dash-tab-btn:hover {
+  color: #0f172a;
+  background: rgba(226, 232, 240, 0.95);
+}
+.light-theme .dash-tab-btn.active[data-slide-index="0"] {
+  border-color: rgba(217, 119, 6, 0.6);
+  background: rgba(254, 243, 199, 0.9);
+  color: #b45309;
+}
+.light-theme .dash-tab-btn.active[data-slide-index="1"] {
+  border-color: rgba(2, 132, 199, 0.6);
+  background: rgba(224, 242, 254, 0.9);
+  color: #0284c7;
+}
+.light-theme .dash-tab-btn.active[data-slide-index="2"] {
+  border-color: rgba(5, 150, 105, 0.6);
+  background: rgba(209, 250, 229, 0.9);
+  color: #059669;
+}
+.light-theme .dash-tab-btn.active[data-slide-index="3"] {
+  border-color: rgba(13, 148, 136, 0.6);
+  background: rgba(204, 251, 241, 0.9);
   color: #0d9488;
 }
 
+/* Indicator dots */
 .carousel-indicator-dot {
-  transition: all 0.3s ease;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background-color: #334155;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0;
 }
-
+.carousel-indicator-dot:hover {
+  background-color: #64748b;
+}
 .carousel-indicator-dot.active {
   width: 2rem;
   background-color: #00e5c9;
+  box-shadow: 0 0 12px rgba(0, 229, 201, 0.5);
 }
-
+.light-theme .carousel-indicator-dot {
+  background-color: #cbd5e1;
+}
 .light-theme .carousel-indicator-dot.active {
   background-color: #0d9488;
+  box-shadow: 0 0 12px rgba(13, 148, 136, 0.5);
+}
+
+/* Floating Navigation Arrows */
+.carousel-float-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 25;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 9999px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #cbd5e1;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease;
+}
+.carousel-float-arrow:hover {
+  background: rgba(0, 229, 201, 0.2);
+  border-color: rgba(0, 229, 201, 0.6);
+  color: #00e5c9;
+  transform: translateY(-50%) scale(1.08);
+}
+.carousel-float-left {
+  left: 0.5rem;
+}
+.carousel-float-right {
+  right: 0.5rem;
 }
 
 /* Embedded Pharmacy Chatbot */

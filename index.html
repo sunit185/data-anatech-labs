@@ -245,47 +245,47 @@
 
         <div class="relative glass-panel rounded-3xl overflow-hidden border border-white/15 p-4 sm:p-7 shadow-2xl">
           
-          <!-- Carousel Navigation Tabs & Domain Selector -->
-          <div class="flex flex-col sm:flex-row items-center justify-between pb-4 mb-5 border-b border-white/10 gap-4">
+          <!-- Carousel Navigation Tabs & Controls Bar -->
+          <div class="flex items-center justify-between pb-3 sm:pb-4 mb-4 sm:mb-6 border-b border-white/10 gap-2 sm:gap-4">
             
-            <!-- Tab Buttons -->
-            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
-              <button class="dash-tab-btn active px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-2 border border-amber-500/40 bg-amber-500/10 text-amber-300 transition-all cursor-pointer" data-slide-index="0">
-                <i data-lucide="bar-chart-2" class="w-4 h-4 text-amber-400"></i>
+            <!-- Tab Buttons (Single-row with smooth horizontal touch-scrolling on mobile) -->
+            <div class="carousel-tabs-scroller flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar py-1 scroll-smooth max-w-[calc(100%-82px)] sm:max-w-none">
+              <button class="dash-tab-btn active" data-slide-index="0" aria-label="Power BI Dashboard">
+                <i data-lucide="bar-chart-2" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400 shrink-0"></i>
                 <span class="font-bold">Power BI</span>
-                <span class="text-slate-500 hidden sm:inline">&bull;</span>
-                <span class="hidden sm:inline">Sales & Marketing</span>
+                <span class="text-slate-500 hidden md:inline">&bull;</span>
+                <span class="hidden md:inline font-normal text-xs text-slate-300">Sales & Marketing</span>
               </button>
 
-              <button class="dash-tab-btn px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-2 border border-transparent text-slate-400 hover:text-white hover:bg-slate-800/50 transition-all cursor-pointer" data-slide-index="1">
-                <i data-lucide="pie-chart" class="w-4 h-4 text-sky-400"></i>
+              <button class="dash-tab-btn" data-slide-index="1" aria-label="Tableau Dashboard">
+                <i data-lucide="pie-chart" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-sky-400 shrink-0"></i>
                 <span class="font-bold">Tableau</span>
-                <span class="text-slate-500 hidden sm:inline">&bull;</span>
-                <span class="hidden sm:inline">E-Commerce</span>
+                <span class="text-slate-500 hidden md:inline">&bull;</span>
+                <span class="hidden md:inline font-normal text-xs text-slate-300">E-Commerce</span>
               </button>
 
-              <button class="dash-tab-btn px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-2 border border-transparent text-slate-400 hover:text-white hover:bg-slate-800/50 transition-all cursor-pointer" data-slide-index="2">
-                <i data-lucide="layers" class="w-4 h-4 text-emerald-400"></i>
+              <button class="dash-tab-btn" data-slide-index="2" aria-label="Qlik Sense Dashboard">
+                <i data-lucide="layers" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-400 shrink-0"></i>
                 <span class="font-bold">Qlik Sense</span>
-                <span class="text-slate-500 hidden sm:inline">&bull;</span>
-                <span class="hidden sm:inline">Finance</span>
+                <span class="text-slate-500 hidden md:inline">&bull;</span>
+                <span class="hidden md:inline font-normal text-xs text-slate-300">Finance</span>
               </button>
 
-              <button class="dash-tab-btn px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-2 border border-transparent text-slate-400 hover:text-white hover:bg-slate-800/50 transition-all cursor-pointer" data-slide-index="3">
-                <i data-lucide="pill" class="w-4 h-4 text-teal-400"></i>
+              <button class="dash-tab-btn" data-slide-index="3" aria-label="Pharmacy AI Dashboard">
+                <i data-lucide="pill" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-teal-400 shrink-0"></i>
                 <span class="font-bold">Pharmacy AI</span>
-                <span class="text-slate-500 hidden sm:inline">&bull;</span>
-                <span class="hidden sm:inline">Health & Bot</span>
+                <span class="text-slate-500 hidden md:inline">&bull;</span>
+                <span class="hidden md:inline font-normal text-xs text-slate-300">Health & Chatbot</span>
               </button>
             </div>
 
-            <!-- Slide Navigation Controls -->
-            <div class="flex items-center gap-2.5">
-              <span id="carouselActiveIndicator" class="text-xs font-mono text-slate-400 hidden md:inline">Dashboard 1 of 4</span>
-              <button id="carouselPrevBtn" class="p-2 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-white/10 text-slate-300 hover:text-white transition-all cursor-pointer" aria-label="Previous Dashboard">
+            <!-- Slide Navigation Controls (Prev / Next Buttons) -->
+            <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+              <span id="carouselActiveIndicator" class="text-xs font-mono text-slate-400 hidden lg:inline mr-1">Dashboard 1 of 4</span>
+              <button id="carouselPrevBtn" class="p-2 sm:p-2.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 active:scale-95 border border-white/10 text-slate-200 hover:text-white transition-all cursor-pointer shadow-sm flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9" aria-label="Previous Dashboard" title="Previous Dashboard">
                 <i data-lucide="chevron-left" class="w-4 h-4"></i>
               </button>
-              <button id="carouselNextBtn" class="p-2 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-white/10 text-slate-300 hover:text-white transition-all cursor-pointer" aria-label="Next Dashboard">
+              <button id="carouselNextBtn" class="p-2 sm:p-2.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 active:scale-95 border border-white/10 text-slate-200 hover:text-white transition-all cursor-pointer shadow-sm flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9" aria-label="Next Dashboard" title="Next Dashboard">
                 <i data-lucide="chevron-right" class="w-4 h-4"></i>
               </button>
             </div>
@@ -294,6 +294,14 @@
 
           <!-- Carousel Container & Slides Track -->
           <div class="dashboard-carousel-container relative">
+            <!-- Floating Navigation Arrows for Large Screens -->
+            <button id="carouselSidePrevBtn" class="carousel-float-arrow carousel-float-left hidden md:flex" aria-label="Previous Dashboard" title="Previous Dashboard">
+              <i data-lucide="chevron-left" class="w-5 h-5"></i>
+            </button>
+            <button id="carouselSideNextBtn" class="carousel-float-arrow carousel-float-right hidden md:flex" aria-label="Next Dashboard" title="Next Dashboard">
+              <i data-lucide="chevron-right" class="w-5 h-5"></i>
+            </button>
+
             <div id="dashboardCarouselTrack" class="dashboard-carousel-track">
 
               <!-- ==========================================================
